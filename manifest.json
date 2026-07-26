@@ -1,0 +1,17 @@
+{
+  "name": "Official AI Apps Hub",
+  "short_name": "AI Apps Hub",
+  "description": "Premium Hub for Android applications powered by Artificial Intelligence.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#03000a",
+  "theme_color": "#03000a",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
