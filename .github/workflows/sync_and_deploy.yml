@@ -1,23 +1,15 @@
-name: Sync Releases & Deploy to GitHub Pages
+name: Sync Releases & Auto-Build Pages
 
 on:
   schedule:
-    # Run every 6 hours automatically to check for new releases
+    # Run every 6 hours automatically to check for new releases across all repositories
     - cron: '0 */6 * * *'
   push:
     branches:
       - main
   workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow committing updates and deploying to Pages
 permissions:
   contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
 
 jobs:
   sync-and-build:
@@ -56,19 +48,3 @@ jobs:
           else
             echo "No new updates or releases detected. Workspace clean."
           fi
-
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: sync-and-build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
