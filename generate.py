@@ -32,7 +32,7 @@ APPS_METADATA = [
             "storage": "50MB free space",
             "internet": "Required for online advanced AI features (offline mode available for dictionary spelling)"
         },
-        "keywords": "AI Keyboard, SpellType, Grammar Correction Keyboard, Smart Android Keyboard, Auto-correction App, AI typing helper, Salman Laghari apps"
+        "keywords": "AI Keyboard, SpellType, Grammar Correction Keyboard, Smart Android Keyboard, Auto-correction App, AI typing helper, Prince Laghari & TEAM PK AI apps"
     },
     {
         "id": "pk-ai",
@@ -55,7 +55,7 @@ APPS_METADATA = [
             "storage": "20MB free space",
             "internet": "Required for dynamic AI responses"
         },
-        "keywords": "PK AI, Pakistan AI Assistant, Urdu chatbot, Salman Laghari AI, local AI helper, Urdu smart chat, Pakistan digital companion"
+        "keywords": "PK AI, Pakistan AI Assistant, Urdu chatbot, Prince Laghari & TEAM PK AI AI, local AI helper, Urdu smart chat, Pakistan digital companion"
     },
     {
         "id": "pulse-music-player-ai",
@@ -101,7 +101,7 @@ APPS_METADATA = [
             "storage": "40MB free space",
             "internet": "Required for streaming database details"
         },
-        "keywords": "Rising Flix, Movie Tracker, TV Show tracker, Anime recommender, AI movie suggestions, Salman Laghari entertainment"
+        "keywords": "Rising Flix, Movie Tracker, TV Show tracker, Anime recommender, AI movie suggestions, Prince Laghari & TEAM PK AI entertainment"
     },
     {
         "id": "click-browser",
@@ -269,7 +269,7 @@ APPS_METADATA = [
 FAQ_DATA = [
     {
         "q": "What is the Official AI Apps Hub?",
-        "a": "It is the premier digital landing and update page for all Android applications developed by Salman Laghari, focusing on cutting-edge Glassmorphism designs and AI-infused productivity tools."
+        "a": "It is the premier digital landing and update page for all Android applications developed by Prince Laghari & TEAM PK AI, focusing on cutting-edge Glassmorphism designs and AI-infused productivity tools."
     },
     {
         "q": "Are these applications safe to download and install?",
@@ -451,7 +451,7 @@ def build_app_page(app, release, screenshots):
         "description": app["short_desc"],
         "author": {
             "@type": "Person",
-            "name": "Salman Laghari",
+            "name": "Prince Laghari & TEAM PK AI",
             "url": "https://github.com/Salmanlaghari"
         }
     }
@@ -468,10 +468,10 @@ def build_app_page(app, release, screenshots):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Optimization -->
-    <title>{app['name']} - Official AI Apps Hub | Salman Laghari</title>
+    <title>{app['name']} - Official AI Apps Hub | Prince Laghari & TEAM PK AI</title>
     <meta name="description" content="{app['short_desc']}">
     <meta name="keywords" content="{keywords_meta}">
-    <meta name="author" content="Salman Laghari">
+    <meta name="author" content="Prince Laghari & TEAM PK AI">
 
     <!-- Open Graph (Facebook / LinkedIn) -->
     <meta property="og:type" content="website">
@@ -512,7 +512,7 @@ def build_app_page(app, release, screenshots):
                 <img src="../assets/images/favicon.svg" alt="AI Apps Hub Logo" class="w-10 h-10 group-hover:scale-105 transition-all duration-300">
                 <div class="flex flex-col">
                     <span class="text-xl font-extrabold text-white tracking-wide group-hover:text-gradient-neon transition-all duration-300">AI APPS HUB</span>
-                    <span class="text-[10px] text-gray-400 tracking-widest font-mono">SALMAN LAGHARI</span>
+                    <span class="text-[10px] text-gray-400 tracking-widest font-mono">PRINCE LAGHARI & TEAM PK AI</span>
                 </div>
             </a>
             <nav class="flex items-center gap-6">
@@ -641,7 +641,7 @@ def build_app_page(app, release, screenshots):
                 </div>
             </div>
             <div class="border-t border-white/5 pt-8 text-center text-xs text-gray-500">
-                <p>© 2026 AI Apps Hub. Built by <a href="https://github.com/Salmanlaghari" target="_blank" class="text-gray-400 hover:text-cyan-400 transition">Salman Laghari</a>. All Rights Reserved.</p>
+                <p>© 2026 AI Apps Hub. Built by <a href="https://github.com/Salmanlaghari" target="_blank" class="text-gray-400 hover:text-cyan-400 transition">Prince Laghari & TEAM PK AI</a>. All Rights Reserved.</p>
                 <p class="mt-2 text-[10px] text-gray-600 font-mono">Precision Crafted with Glassmorphic Aesthetics & AI Architecture.</p>
             </div>
         </div>
@@ -785,10 +785,10 @@ def build_index_page(apps_with_releases):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Optimization -->
-    <title>Official AI Apps Hub - Premium Android AI Applications | Salman Laghari</title>
+    <title>Official AI Apps Hub - Premium Android AI Applications | Prince Laghari & TEAM PK AI</title>
     <meta name="description" content="Discover premium, glassmorphic Android applications powered by artificial intelligence. Download latest stable APK releases directly from official GitHub builds.">
-    <meta name="keywords" content="Salman Laghari, AI Apps Hub, SpellType Keyboard, Android AI applications, PK AI, Premium glassmorphic apps, APK download hub, open source Android apps">
-    <meta name="author" content="Salman Laghari">
+    <meta name="keywords" content="Prince Laghari & TEAM PK AI, AI Apps Hub, SpellType Keyboard, Android AI applications, PK AI, Premium glassmorphic apps, APK download hub, open source Android apps">
+    <meta name="author" content="Prince Laghari & TEAM PK AI">
 
     <!-- Open Graph (Facebook / LinkedIn) -->
     <meta property="og:type" content="website">
@@ -800,7 +800,7 @@ def build_index_page(apps_with_releases):
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Official AI Apps Hub | Salman Laghari">
+    <meta name="twitter:title" content="Official AI Apps Hub | Prince Laghari & TEAM PK AI">
     <meta name="twitter:description" content="Premium, glassmorphic Android applications powered by Artificial Intelligence.">
     <meta name="twitter:image" content="{BASE_URL}/assets/images/favicon.svg">
 
@@ -826,7 +826,7 @@ def build_index_page(apps_with_releases):
                 <img src="assets/images/favicon.svg" alt="Logo" class="w-10 h-10 group-hover:scale-105 transition-all duration-300">
                 <div class="flex flex-col">
                     <span class="text-xl font-extrabold text-white tracking-wide group-hover:text-gradient-neon transition-all duration-300">AI APPS HUB</span>
-                    <span class="text-[10px] text-gray-400 tracking-widest font-mono">SALMAN LAGHARI</span>
+                    <span class="text-[10px] text-gray-400 tracking-widest font-mono">PRINCE LAGHARI & TEAM PK AI</span>
                 </div>
             </a>
             <nav class="hidden md:flex items-center gap-6">
@@ -961,7 +961,7 @@ def build_index_page(apps_with_releases):
             </div>
             <div class="flex-grow text-center md:text-left">
                 <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold tracking-wider uppercase border border-purple-500/20">The Visionary</span>
-                <h2 class="text-3xl font-extrabold text-white tracking-tight mt-3 mb-4">Salman Laghari</h2>
+                <h2 class="text-3xl font-extrabold text-white tracking-tight mt-3 mb-4">Prince Laghari & TEAM PK AI</h2>
                 <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
                     A passionate Android systems architect, building state-of-the-art consumer utilities. Specializing in highly optimized client-side AI integration, hardware-accelerated rendering, and premium minimalist translucent glassmorphic styles.
                 </p>
@@ -995,7 +995,7 @@ def build_index_page(apps_with_releases):
                 </div>
             </div>
             <div class="border-t border-white/5 pt-8 text-center text-xs text-gray-500">
-                <p>© 2026 AI Apps Hub. Built by <a href="https://github.com/Salmanlaghari" target="_blank" class="text-gray-400 hover:text-cyan-400 transition">Salman Laghari</a>. All Rights Reserved.</p>
+                <p>© 2026 AI Apps Hub. Built by <a href="https://github.com/Salmanlaghari" target="_blank" class="text-gray-400 hover:text-cyan-400 transition">Prince Laghari & TEAM PK AI</a>. All Rights Reserved.</p>
                 <p class="mt-2 text-[10px] text-gray-600 font-mono">Precision Crafted with Glassmorphic Aesthetics & AI Architecture.</p>
             </div>
         </div>
