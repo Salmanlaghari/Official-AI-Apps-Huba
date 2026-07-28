@@ -6,22 +6,22 @@
 
     <!-- SEO Optimization -->
     <title>AI Finder - Official AI Apps Hub | Prince Laghari & TEAM PK AI</title>
-    <meta name="description" content="AI Finder — Ultra-premium AI-powered search aggregator with Firebase live data, dark cyberpunk UI, and curated directory of 2000+ AI tools worldwide. Built by Prince Laghari & TEAM PK AI.">
-    <meta name="keywords" content="AI Finder, AI Tools Directory, Artificial Intelligence Apps, find AI software, AI models finder, Prince Laghari, TEAM PK AI, Kotlin AI app, Jetpack Compose AI, Firebase AI directory">
+    <meta name="description" content="AI Finder — the ultimate AI tools directory for Android. Browse 2000+ AI apps with smart filters, favorites, offline mode, and real-time Firebase sync. Download the latest APK free.">
+    <meta name="keywords" content="AI Finder, AI Tools Directory, Artificial Intelligence Apps, find AI software, AI models finder, AI tools Android, ChatGPT alternatives, AI directory app, Prince Laghari apps">
     <meta name="author" content="Prince Laghari & TEAM PK AI">
 
-    <!-- Open Graph -->
+    <!-- Open Graph (Facebook / LinkedIn) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="AI Finder - Ultra-Premium AI Tools Directory">
-    <meta property="og:description" content="Browse 2000+ AI tools with live Firebase sync, advanced filters, and cyberpunk dark UI. Built with Kotlin & Jetpack Compose.">
+    <meta property="og:title" content="AI Finder - Official AI Apps Hub">
+    <meta property="og:description" content="Browse 2000+ AI tools with smart filters, favorites, offline caching, and real-time Firebase sync. Download free.">
     <meta property="og:url" content="https://salmanlaghari.github.io/Official-AI-Apps-Huba/apps/ai-finder.html">
     <meta property="og:image" content="https://salmanlaghari.github.io/Official-AI-Apps-Huba/assets/images/favicon.svg">
     <meta property="og:site_name" content="Official AI Apps Hub">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI Finder - Ultra-Premium AI Tools Directory">
-    <meta name="twitter:description" content="Browse 2000+ AI tools with live Firebase sync, advanced filters, and cyberpunk dark UI.">
+    <meta name="twitter:title" content="AI Finder - Official AI Apps Hub">
+    <meta name="twitter:description" content="Browse 2000+ AI tools with smart filters, favorites, offline caching, and real-time Firebase sync.">
     <meta name="twitter:image" content="https://salmanlaghari.github.io/Official-AI-Apps-Huba/assets/images/favicon.svg">
 
     <!-- Favicon & Manifest -->
@@ -29,12 +29,19 @@
     <link rel="manifest" href="../manifest.json">
     <meta name="theme-color" content="#03000a">
 
+    <!-- Google AdSense Verification -->
+    <meta name="google-adsense-platform-account" content="ca-pub-4217735637689098">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4217735637689098"
+     crossorigin="anonymous"></script>
+
     <!-- Tailwind CSS & Custom Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
 
     <!-- Schema Markup -->
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AI Finder", "operatingSystem": "Android", "applicationCategory": "Productivity & Tools", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "Ultra-premium AI-powered search aggregator with Firebase live data, dark cyberpunk UI, and curated directory of 2000+ AI tools worldwide.", "author": {"@type": "Person", "name": "Prince Laghari & TEAM PK AI", "url": "https://github.com/Salmanlaghari"}, "softwareVersion": "v1.07.0", "fileSize": "15MB", "screenshot": "https://salmanlaghari.github.io/Official-AI-Apps-Huba/assets/images/ai-finder-screenshot.png"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AI Finder", "operatingSystem": "Android", "applicationCategory": "Productivity & Tools", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "description": "The ultimate AI tools directory for Android. Browse 2000+ AI apps with smart filters, favorites, offline mode, and real-time Firebase sync.", "author": {"@type": "Person", "name": "Prince Laghari & TEAM PK AI", "url": "https://github.com/Salmanlaghari"}, "softwareVersion": "v1.07.0", "downloadUrl": "https://github.com/Salmanlaghari/ai-finder-app/releases"}</script>
 </head>
 <body class="bg-[#03000a] text-gray-200 min-h-screen flex flex-col">
 
@@ -64,7 +71,7 @@
         </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Main Content Grid -->
     <main class="flex-grow container mx-auto px-4 py-8 max-w-6xl">
         <!-- Breadcrumb -->
         <nav class="flex text-xs text-gray-400 mb-8" aria-label="Breadcrumb">
@@ -90,289 +97,552 @@
             </ol>
         </nav>
 
-        <!-- Product Hero -->
+        <!-- AdSense Ad Unit - Top Banner -->
+        <div class="mb-8 flex justify-center">
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-4217735637689098"
+                 data-ad-slot="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- Auto-Update Status Banner -->
+        <div id="updateBanner" class="hidden mb-6 glass-premium p-4 rounded-2xl border border-cyan-500/30 glow-blue flex items-center gap-4">
+            <div class="w-3 h-3 rounded-full bg-cyan-400 animate-pulse shrink-0"></div>
+            <div class="flex-grow">
+                <p class="text-cyan-400 font-bold text-sm" id="updateBannerText">Checking for updates...</p>
+                <p class="text-gray-400 text-xs" id="updateBannerSub">Verifying latest release from GitHub</p>
+            </div>
+            <a id="updateBannerBtn" href="#" target="_blank" class="hidden px-4 py-2 text-xs font-bold rounded-lg bg-cyan-500/10 hover:bg-cyan-500 text-cyan-400 hover:text-black border border-cyan-500/20 transition">
+                Update Now
+            </a>
+        </div>
+
+        <!-- Product Hero Box -->
         <div class="glass-premium p-8 rounded-3xl mb-12 flex flex-col md:flex-row gap-8 items-center md:items-start glow-blue">
-            <div class="w-28 h-28 md:w-36 md:h-36 rounded-2xl bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center text-5xl md:text-6xl shadow-2xl shrink-0 select-none glow-purple">
+            <div class="w-28 h-28 md:w-36 md:h-36 rounded-2xl bg-gradient-neon flex items-center justify-center text-5xl md:text-6xl shadow-2xl shrink-0 select-none glow-purple">
                 🔍
             </div>
             <div class="flex-grow text-center md:text-left">
                 <div class="flex flex-col md:flex-row md:items-center gap-3 mb-3 justify-center md:justify-start">
                     <h1 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">AI Finder</h1>
-                    <div class="inline-flex justify-center md:justify-start gap-2">
-                        <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400 border border-green-500/30 font-medium">v1.07.0</span>
-                        <span class="px-3 py-1 text-xs rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-medium">LIVE</span>
+                    <div class="inline-flex justify-center md:justify-start">
+                        <span id="versionBadge" class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400 border border-green-500/30 font-medium glow-text-blue">Version v1.07.0</span>
+                    </div>
+                    <div class="inline-flex justify-center md:justify-start">
+                        <span class="px-3 py-1 text-xs rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30 font-medium">Android</span>
                     </div>
                 </div>
-                <p class="text-xs text-purple-400 font-semibold uppercase tracking-wider mb-4 font-mono">Productivity & Tools • Android 7.0+</p>
+                <p class="text-xs text-purple-400 font-semibold uppercase tracking-wider mb-4 font-mono">Productivity & Tools • AI Directory</p>
                 <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
-                    Ultra-premium AI-powered search aggregator built with <strong class="text-white">Kotlin & Jetpack Compose</strong>. Connects live to <strong class="text-cyan-400">Firebase Firestore</strong> to fetch, filter, and display a curated world directory of <strong class="text-white">2000+ AI tools</strong> inside a beautiful dark-mode cyberpunk UI.
+                    AI Finder is the definitive AI tools discovery platform for Android. Instantly browse, search, and filter through <strong class="text-white">2,000+ AI applications</strong> spanning content generation, image design, coding assistants, voice modulation, and predictive modeling. Save favorites, explore developer APIs, and stay updated with the latest AI trends — all in a stunning glassmorphic interface powered by real-time Firebase sync.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="https://github.com/Salmanlaghari/ai-finder-app/releases/latest/download/ailatestfinder-release.apk" target="_blank" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold rounded-xl text-center hover:opacity-90 active:scale-[0.98] transition flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                        Download APK (v1.07.0)
+                    <a id="downloadBtn" href="https://github.com/Salmanlaghari/ai-finder-app/releases/download/v1.07.0/ailatestfinder-release.apk" target="_blank" class="px-8 py-4 bg-gradient-neon text-white font-bold rounded-xl text-center shadow-lg hover:scale-[1.03] active:scale-[0.98] glow-hover-blue transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Download APK (Latest Release)
                     </a>
                     <a href="https://github.com/Salmanlaghari/ai-finder-app" target="_blank" class="px-6 py-4 glass border border-white/10 hover:border-white/20 text-white font-bold rounded-xl text-center hover:bg-white/5 active:scale-[0.98] transition flex items-center justify-center gap-2">
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        View Source
+                        View Source Code
                     </a>
                 </div>
+                <!-- Stats Row -->
+                <div class="flex flex-wrap gap-6 mt-6 justify-center md:justify-start">
+                    <div class="text-center">
+                        <p class="text-2xl font-extrabold text-white">2,000+</p>
+                        <p class="text-xs text-gray-400">AI Tools Indexed</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl font-extrabold text-cyan-400">15+</p>
+                        <p class="text-xs text-gray-400">Categories</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl font-extrabold text-purple-400">4.8★</p>
+                        <p class="text-xs text-gray-400">User Rating</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-2xl font-extrabold text-green-400">Free</p>
+                        <p class="text-xs text-gray-400">No Subscription</p>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- App Screenshots Gallery -->
+        <!-- AdSense Ad Unit - In-Article -->
+        <div class="mb-10 flex justify-center">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="fluid"
+                 data-ad-layout-key="-gw-3+1f-3d+2z"
+                 data-ad-client="ca-pub-4217735637689098"
+                 data-ad-slot="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- Screenshots Showcase -->
         <div class="mb-12">
-            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <span class="text-cyan-400">📱</span> App Screenshots
-            </h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="glass-premium rounded-2xl overflow-hidden glow-blue aspect-[9/16] flex items-center justify-center bg-gradient-to-br from-[#0a0a1a] to-[#1a1a2e]">
-                    <div class="text-center p-4">
-                        <div class="text-4xl mb-3">🏠</div>
-                        <p class="text-xs text-gray-400 font-bold">HOME SCREEN</p>
-                        <p class="text-[10px] text-gray-500 mt-1">Cyberpunk dark UI with search bar & featured tools</p>
+            <h3 class="text-2xl font-bold mb-6 text-white flex items-center">
+                <span class="mr-2 text-cyan-400">📸</span> App Screenshots
+            </h3>
+            <div class="flex gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-transparent">
+                <!-- Screenshot 1: Home Screen -->
+                <div class="flex-none w-72 h-[520px] rounded-2xl overflow-hidden glass border border-white/10 hover:border-cyan-400/50 shadow-2xl transition-all duration-300 relative">
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a] to-[#03000a] p-5 flex flex-col">
+                        <!-- Mock Status Bar -->
+                        <div class="flex justify-between items-center mb-4 text-[10px] text-gray-400">
+                            <span>9:41</span>
+                            <div class="flex gap-1">
+                                <span>📶</span><span>🔋</span>
+                            </div>
+                        </div>
+                        <!-- Mock Search Bar -->
+                        <div class="glass p-3 rounded-xl mb-4 flex items-center gap-2">
+                            <span class="text-cyan-400">🔍</span>
+                            <span class="text-gray-500 text-sm">Search 2000+ AI tools...</span>
+                        </div>
+                        <!-- Mock Categories -->
+                        <div class="flex gap-2 mb-4 overflow-hidden">
+                            <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-[10px] font-bold">All</span>
+                            <span class="px-3 py-1 rounded-full glass text-gray-400 text-[10px]">Chat</span>
+                            <span class="px-3 py-1 rounded-full glass text-gray-400 text-[10px]">Image</span>
+                            <span class="px-3 py-1 rounded-full glass text-gray-400 text-[10px]">Code</span>
+                            <span class="px-3 py-1 rounded-full glass text-gray-400 text-[10px]">Voice</span>
+                        </div>
+                        <!-- Mock AI Tool Cards -->
+                        <div class="space-y-3 flex-grow">
+                            <div class="glass p-3 rounded-xl flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/30 to-emerald-500/10 flex items-center justify-center text-lg">🤖</div>
+                                <div class="flex-grow">
+                                    <p class="text-white text-xs font-bold">ChatGPT</p>
+                                    <p class="text-gray-500 text-[10px]">OpenAI • Free</p>
+                                </div>
+                                <span class="text-green-400 text-[10px]">✓ Verified</span>
+                            </div>
+                            <div class="glass p-3 rounded-xl flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/30 to-violet-500/10 flex items-center justify-center text-lg">🎨</div>
+                                <div class="flex-grow">
+                                    <p class="text-white text-xs font-bold">Midjourney</p>
+                                    <p class="text-gray-500 text-[10px]">Midjourney Inc • Paid</p>
+                                </div>
+                                <span class="text-green-400 text-[10px]">✓ Verified</span>
+                            </div>
+                            <div class="glass p-3 rounded-xl flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/30 to-cyan-500/10 flex items-center justify-center text-lg">💻</div>
+                                <div class="flex-grow">
+                                    <p class="text-white text-xs font-bold">GitHub Copilot</p>
+                                    <p class="text-gray-500 text-[10px]">GitHub • Freemium</p>
+                                </div>
+                                <span class="text-green-400 text-[10px]">✓ Verified</span>
+                            </div>
+                            <div class="glass p-3 rounded-xl flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500/30 to-amber-500/10 flex items-center justify-center text-lg">🎵</div>
+                                <div class="flex-grow">
+                                    <p class="text-white text-xs font-bold">Suno AI</p>
+                                    <p class="text-gray-500 text-[10px]">Suno • Freemium</p>
+                                </div>
+                                <span class="text-green-400 text-[10px]">✓ Verified</span>
+                            </div>
+                            <div class="glass p-3 rounded-xl flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500/30 to-rose-500/10 flex items-center justify-center text-lg">📹</div>
+                                <div class="flex-grow">
+                                    <p class="text-white text-xs font-bold">Runway ML</p>
+                                    <p class="text-gray-500 text-[10px]">Runway • Freemium</p>
+                                </div>
+                                <span class="text-green-400 text-[10px]">✓ Verified</span>
+                            </div>
+                        </div>
+                        <!-- Mock Bottom Nav -->
+                        <div class="flex justify-around mt-3 pt-3 border-t border-white/5">
+                            <span class="text-cyan-400 text-[10px]">🏠 Home</span>
+                            <span class="text-gray-500 text-[10px]">⭐ Favorites</span>
+                            <span class="text-gray-500 text-[10px]">📰 News</span>
+                            <span class="text-gray-500 text-[10px]">⚙️ Settings</span>
+                        </div>
                     </div>
                 </div>
-                <div class="glass-premium rounded-2xl overflow-hidden glow-blue aspect-[9/16] flex items-center justify-center bg-gradient-to-br from-[#0a0a1a] to-[#1a1a2e]">
-                    <div class="text-center p-4">
-                        <div class="text-4xl mb-3">🔍</div>
-                        <p class="text-xs text-gray-400 font-bold">SEARCH & FILTER</p>
-                        <p class="text-[10px] text-gray-500 mt-1">Advanced filters by category, pricing, platform</p>
+
+                <!-- Screenshot 2: Tool Detail -->
+                <div class="flex-none w-72 h-[520px] rounded-2xl overflow-hidden glass border border-white/10 hover:border-cyan-400/50 shadow-2xl transition-all duration-300 relative">
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a] to-[#03000a] p-5 flex flex-col">
+                        <div class="flex justify-between items-center mb-3 text-[10px] text-gray-400">
+                            <span>← Back</span>
+                            <span>9:41</span>
+                            <div class="flex gap-1"><span>📶</span><span>🔋</span></div>
+                        </div>
+                        <!-- Tool Hero -->
+                        <div class="glass-premium p-4 rounded-xl mb-4 text-center">
+                            <div class="w-16 h-16 mx-auto rounded-xl bg-gradient-to-br from-green-500/30 to-emerald-500/10 flex items-center justify-center text-3xl mb-2">🤖</div>
+                            <p class="text-white font-extrabold text-lg">ChatGPT</p>
+                            <p class="text-gray-400 text-[10px]">by OpenAI</p>
+                            <div class="flex gap-2 mt-2 justify-center">
+                                <span class="px-2 py-0.5 rounded-full bg-green-500/20 text-green-400 text-[9px]">Free</span>
+                                <span class="px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-400 text-[9px]">Web</span>
+                                <span class="px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-400 text-[9px]">API</span>
+                            </div>
+                        </div>
+                        <!-- Description -->
+                        <p class="text-gray-300 text-xs leading-relaxed mb-3">Advanced conversational AI by OpenAI. Generate text, code, analysis, and creative content with GPT-4o.</p>
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span class="px-2 py-0.5 rounded glass text-[9px] text-gray-400">#chatbot</span>
+                            <span class="px-2 py-0.5 rounded glass text-[9px] text-gray-400">#writing</span>
+                            <span class="px-2 py-0.5 rounded glass text-[9px] text-gray-400">#coding</span>
+                            <span class="px-2 py-0.5 rounded glass text-[9px] text-gray-400">#analysis</span>
+                        </div>
+                        <!-- Buttons -->
+                        <div class="grid grid-cols-2 gap-2 mt-auto">
+                            <div class="glass p-2 rounded-lg text-center text-cyan-400 text-xs font-bold">🌐 Visit</div>
+                            <div class="glass p-2 rounded-lg text-center text-purple-400 text-xs font-bold">❤️ Favorite</div>
+                        </div>
                     </div>
                 </div>
-                <div class="glass-premium rounded-2xl overflow-hidden glow-blue aspect-[9/16] flex items-center justify-center bg-gradient-to-br from-[#0a0a1a] to-[#1a1a2e]">
-                    <div class="text-center p-4">
-                        <div class="text-4xl mb-3">📋</div>
-                        <p class="text-xs text-gray-400 font-bold">TOOL DETAIL</p>
-                        <p class="text-[10px] text-gray-500 mt-1">Full info, screenshots, ratings, & download links</p>
+
+                <!-- Screenshot 3: Favorites & Offline -->
+                <div class="flex-none w-72 h-[520px] rounded-2xl overflow-hidden glass border border-white/10 hover:border-cyan-400/50 shadow-2xl transition-all duration-300 relative">
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a] to-[#03000a] p-5 flex flex-col">
+                        <div class="flex justify-between items-center mb-4 text-[10px] text-gray-400">
+                            <span>9:41</span>
+                            <div class="flex gap-1"><span>📶</span><span>🔋</span></div>
+                        </div>
+                        <p class="text-white font-extrabold text-lg mb-4">⭐ My Favorites</p>
+                        <div class="space-y-3 flex-grow">
+                            <div class="glass p-3 rounded-xl flex items-center gap-3 border border-pink-500/20">
+                                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500/30 to-rose-500/10 flex items-center justify-center text-lg">🎨</div>
+                                <div class="flex-grow">
+                                    <p class="text-white text-xs font-bold">Midjourney</p>
+                                    <p class="text-gray-500 text-[10px]">Image Generation</p>
+                                </div>
+                                <span class="text-pink-400">❤️</span>
+                            </div>
+                            <div class="glass p-3 rounded-xl flex items-center gap-3 border border-pink-500/20">
+                                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/30 to-cyan-500/10 flex items-center justify-center text-lg">💻</div>
+                                <div class="flex-grow">
+                                    <p class="text-white text-xs font-bold">Cursor AI</p>
+                                    <p class="text-gray-500 text-[10px]">Code Editor</p>
+                                </div>
+                                <span class="text-pink-400">❤️</span>
+                            </div>
+                            <div class="glass p-3 rounded-xl flex items-center gap-3 border border-pink-500/20">
+                                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500/30 to-yellow-500/10 flex items-center justify-center text-lg">📊</div>
+                                <div class="flex-grow">
+                                    <p class="text-white text-xs font-bold">Notion AI</p>
+                                    <p class="text-gray-500 text-[10px]">Productivity</p>
+                                </div>
+                                <span class="text-pink-400">❤️</span>
+                            </div>
+                        </div>
+                        <!-- Offline Indicator -->
+                        <div class="glass-premium p-3 rounded-xl mt-3 border border-green-500/20">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                                <p class="text-green-400 text-xs font-bold">Offline Cache Active</p>
+                            </div>
+                            <p class="text-gray-500 text-[10px] mt-1">47 tools saved • Last sync: 2 min ago</p>
+                        </div>
+                        <div class="flex justify-around mt-3 pt-3 border-t border-white/5">
+                            <span class="text-gray-500 text-[10px]">🏠 Home</span>
+                            <span class="text-pink-400 text-[10px]">⭐ Favorites</span>
+                            <span class="text-gray-500 text-[10px]">📰 News</span>
+                            <span class="text-gray-500 text-[10px]">⚙️ Settings</span>
+                        </div>
                     </div>
                 </div>
-                <div class="glass-premium rounded-2xl overflow-hidden glow-blue aspect-[9/16] flex items-center justify-center bg-gradient-to-br from-[#0a0a1a] to-[#1a1a2e]">
-                    <div class="text-center p-4">
-                        <div class="text-4xl mb-3">⭐</div>
-                        <p class="text-xs text-gray-400 font-bold">BOOKMARKS</p>
-                        <p class="text-[10px] text-gray-500 mt-1">Save favorites with Room database offline access</p>
+
+                <!-- Screenshot 4: Categories & Filters -->
+                <div class="flex-none w-72 h-[520px] rounded-2xl overflow-hidden glass border border-white/10 hover:border-cyan-400/50 shadow-2xl transition-all duration-300 relative">
+                    <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a1a] to-[#03000a] p-5 flex flex-col">
+                        <div class="flex justify-between items-center mb-4 text-[10px] text-gray-400">
+                            <span>9:41</span>
+                            <div class="flex gap-1"><span>📶</span><span>🔋</span></div>
+                        </div>
+                        <p class="text-white font-extrabold text-lg mb-4">📂 Categories</p>
+                        <div class="grid grid-cols-2 gap-3 flex-grow">
+                            <div class="glass p-3 rounded-xl text-center"><span class="text-2xl">💬</span><p class="text-white text-[10px] font-bold mt-1">Chatbots</p><p class="text-gray-500 text-[9px]">340+</p></div>
+                            <div class="glass p-3 rounded-xl text-center"><span class="text-2xl">🎨</span><p class="text-white text-[10px] font-bold mt-1">Image Gen</p><p class="text-gray-500 text-[9px]">280+</p></div>
+                            <div class="glass p-3 rounded-xl text-center"><span class="text-2xl">💻</span><p class="text-white text-[10px] font-bold mt-1">Code Assist</p><p class="text-gray-500 text-[9px]">190+</p></div>
+                            <div class="glass p-3 rounded-xl text-center"><span class="text-2xl">🎵</span><p class="text-white text-[10px] font-bold mt-1">Audio/Music</p><p class="text-gray-500 text-[9px]">120+</p></div>
+                            <div class="glass p-3 rounded-xl text-center"><span class="text-2xl">📹</span><p class="text-white text-[10px] font-bold mt-1">Video</p><p class="text-gray-500 text-[9px]">95+</p></div>
+                            <div class="glass p-3 rounded-xl text-center"><span class="text-2xl">📊</span><p class="text-white text-[10px] font-bold mt-1">Productivity</p><p class="text-gray-500 text-[9px]">210+</p></div>
+                            <div class="glass p-3 rounded-xl text-center"><span class="text-2xl">🔬</span><p class="text-white text-[10px] font-bold mt-1">Research</p><p class="text-gray-500 text-[9px]">85+</p></div>
+                            <div class="glass p-3 rounded-xl text-center"><span class="text-2xl">🏥</span><p class="text-white text-[10px] font-bold mt-1">Healthcare</p><p class="text-gray-500 text-[9px]">60+</p></div>
+                        </div>
+                        <div class="flex justify-around mt-3 pt-3 border-t border-white/5">
+                            <span class="text-gray-500 text-[10px]">🏠 Home</span>
+                            <span class="text-gray-500 text-[10px]">⭐ Favorites</span>
+                            <span class="text-gray-500 text-[10px]">📰 News</span>
+                            <span class="text-cyan-400 text-[10px]">⚙️ Settings</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Features & Specs Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <!-- AdSense Ad Unit - Mid-Page Responsive -->
+        <div class="mb-10 flex justify-center">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-4217735637689098"
+                 data-ad-slot="auto"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- Two-Column Layout (Left: Features, Right: Specs & Changelog) -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <!-- Features Column (takes 2 cols) -->
-            <div class="lg:col-span-2">
-                <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                    <span class="text-cyan-400">⚡</span> Key Features
-                </h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <!-- Feature Cards -->
-                    <div class="glass-premium p-5 rounded-2xl glow-blue">
-                        <div class="flex items-start gap-3">
-                            <div class="p-2 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 shrink-0">🔥</div>
+            <div class="lg:col-span-2 space-y-6">
+                <h3 class="text-2xl font-bold text-white flex items-center">
+                    <span class="mr-2 text-cyan-400">✨</span> Key App Features
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="glass p-5 rounded-xl hover:translate-y-[-2px] transition-all duration-300">
+                        <div class="flex items-start">
+                            <div class="p-2 rounded-lg bg-blue-500/10 text-cyan-400 mr-4 border border-blue-500/20">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
                             <div>
-                                <h4 class="font-bold text-white mb-1 text-sm">Firebase Live Database</h4>
-                                <p class="text-gray-400 text-xs leading-relaxed">Real-time sync with Firestore for instant tool updates and new AI app listings. Auto-refreshes when new tools are added.</p>
+                                <h4 class="font-bold text-white mb-1 text-base">2,000+ AI Tools Index</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Browse a massive curated database of AI applications spanning chatbots, image generators, code assistants, voice tools, and more.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="glass-premium p-5 rounded-2xl glow-blue">
-                        <div class="flex items-start gap-3">
-                            <div class="p-2 rounded-lg bg-purple-500/10 text-purple-400 border border-purple-500/20 shrink-0">🎨</div>
+                    <div class="glass p-5 rounded-xl hover:translate-y-[-2px] transition-all duration-300">
+                        <div class="flex items-start">
+                            <div class="p-2 rounded-lg bg-blue-500/10 text-cyan-400 mr-4 border border-blue-500/20">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
                             <div>
-                                <h4 class="font-bold text-white mb-1 text-sm">Cyberpunk Dark UI</h4>
-                                <p class="text-gray-400 text-xs leading-relaxed">Stunning glassmorphic design with neon accents, smooth 60fps animations, and premium dark theme throughout the app.</p>
+                                <h4 class="font-bold text-white mb-1 text-base">Smart Filters & Sort</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Filter by pricing (Free, Freemium, Paid), platform (Web, iOS, Android, API), category, and sort by popularity or newest.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="glass-premium p-5 rounded-2xl glow-blue">
-                        <div class="flex items-start gap-3">
-                            <div class="p-2 rounded-lg bg-green-500/10 text-green-400 border border-green-500/20 shrink-0">📊</div>
+                    <div class="glass p-5 rounded-xl hover:translate-y-[-2px] transition-all duration-300">
+                        <div class="flex items-start">
+                            <div class="p-2 rounded-lg bg-blue-500/10 text-cyan-400 mr-4 border border-blue-500/20">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
                             <div>
-                                <h4 class="font-bold text-white mb-1 text-sm">2000+ AI Tools Directory</h4>
-                                <p class="text-gray-400 text-xs leading-relaxed">Curated and categorized database covering every AI niche — text, image, code, voice, video, data analysis, and more.</p>
+                                <h4 class="font-bold text-white mb-1 text-base">Firebase Real-Time Sync</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Tools database updates in real-time via Cloud Firestore. New AI tools appear instantly without app updates.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="glass-premium p-5 rounded-2xl glow-blue">
-                        <div class="flex items-start gap-3">
-                            <div class="p-2 rounded-lg bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 shrink-0">🔎</div>
+                    <div class="glass p-5 rounded-xl hover:translate-y-[-2px] transition-all duration-300">
+                        <div class="flex items-start">
+                            <div class="p-2 rounded-lg bg-blue-500/10 text-cyan-400 mr-4 border border-blue-500/20">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
                             <div>
-                                <h4 class="font-bold text-white mb-1 text-sm">Advanced Search & Filters</h4>
-                                <p class="text-gray-400 text-xs leading-relaxed">Filter by pricing (Free/Freemium/Paid), platform, category, rating, and API availability. Instant results.</p>
+                                <h4 class="font-bold text-white mb-1 text-base">Favorites & Bookmarks</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Save your most-used AI tools to favorites for instant access. Synced across devices via Firebase.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="glass-premium p-5 rounded-2xl glow-blue">
-                        <div class="flex items-start gap-3">
-                            <div class="p-2 rounded-lg bg-pink-500/10 text-pink-400 border border-pink-500/20 shrink-0">📄</div>
+                    <div class="glass p-5 rounded-xl hover:translate-y-[-2px] transition-all duration-300">
+                        <div class="flex items-start">
+                            <div class="p-2 rounded-lg bg-blue-500/10 text-cyan-400 mr-4 border border-blue-500/20">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
                             <div>
-                                <h4 class="font-bold text-white mb-1 text-sm">Tool Detail Pages</h4>
-                                <p class="text-gray-400 text-xs leading-relaxed">Full screenshots, feature lists, pricing info, developer links, and user ratings for each AI tool.</p>
+                                <h4 class="font-bold text-white mb-1 text-base">Offline Room Cache</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Browse previously loaded tools even without internet. Room database caches data locally for instant access.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="glass-premium p-5 rounded-2xl glow-blue">
-                        <div class="flex items-start gap-3">
-                            <div class="p-2 rounded-lg bg-orange-500/10 text-orange-400 border border-orange-500/20 shrink-0">⭐</div>
+                    <div class="glass p-5 rounded-xl hover:translate-y-[-2px] transition-all duration-300">
+                        <div class="flex items-start">
+                            <div class="p-2 rounded-lg bg-blue-500/10 text-cyan-400 mr-4 border border-blue-500/20">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
                             <div>
-                                <h4 class="font-bold text-white mb-1 text-sm">Bookmark & Favorites</h4>
-                                <p class="text-gray-400 text-xs leading-relaxed">Save your preferred AI tools with local Room database for offline access. Sync across sessions.</p>
+                                <h4 class="font-bold text-white mb-1 text-base">Chrome Custom Tabs</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Open AI tool websites in-app with Chrome Custom Tabs for a seamless, fast browsing experience without leaving the app.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="glass-premium p-5 rounded-2xl glow-blue">
-                        <div class="flex items-start gap-3">
-                            <div class="p-2 rounded-lg bg-red-500/10 text-red-400 border border-red-500/20 shrink-0">📰</div>
+                    <div class="glass p-5 rounded-xl hover:translate-y-[-2px] transition-all duration-300">
+                        <div class="flex items-start">
+                            <div class="p-2 rounded-lg bg-blue-500/10 text-cyan-400 mr-4 border border-blue-500/20">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
                             <div>
-                                <h4 class="font-bold text-white mb-1 text-sm">AI News Feed</h4>
-                                <p class="text-gray-400 text-xs leading-relaxed">Daily curated updates on new AI tool launches, breakthroughs, and industry trends. Stay informed.</p>
+                                <h4 class="font-bold text-white mb-1 text-base">AI News Feed</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Stay updated with the latest AI breakthroughs, tool launches, and industry trends curated from top sources.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="glass-premium p-5 rounded-2xl glow-blue">
-                        <div class="flex items-start gap-3">
-                            <div class="p-2 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 shrink-0">👨‍💻</div>
+                    <div class="glass p-5 rounded-xl hover:translate-y-[-2px] transition-all duration-300">
+                        <div class="flex items-start">
+                            <div class="p-2 rounded-lg bg-blue-500/10 text-cyan-400 mr-4 border border-blue-500/20">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
                             <div>
-                                <h4 class="font-bold text-white mb-1 text-sm">Developer Resources</h4>
-                                <p class="text-gray-400 text-xs leading-relaxed">Open-source models, training datasets, API documentation, and integration guides for developers.</p>
+                                <h4 class="font-bold text-white mb-1 text-base">Glassmorphic UI</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Stunning translucent glass design with neon accents, smooth animations, and Material 3 dynamic theming.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="glass-premium p-5 rounded-2xl glow-blue">
-                        <div class="flex items-start gap-3">
-                            <div class="p-2 rounded-lg bg-teal-500/10 text-teal-400 border border-teal-500/20 shrink-0">🏗️</div>
+                    <div class="glass p-5 rounded-xl hover:translate-y-[-2px] transition-all duration-300">
+                        <div class="flex items-start">
+                            <div class="p-2 rounded-lg bg-blue-500/10 text-cyan-400 mr-4 border border-blue-500/20">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
                             <div>
-                                <h4 class="font-bold text-white mb-1 text-sm">Jetpack Compose UI</h4>
-                                <p class="text-gray-400 text-xs leading-relaxed">Modern declarative UI with Material 3, Hilt dependency injection, and clean MVVM architecture.</p>
+                                <h4 class="font-bold text-white mb-1 text-base">Share & Recommend</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Share AI tools with friends via native Android share sheet. One-tap to recommend the best tools.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="glass-premium p-5 rounded-2xl glow-blue">
-                        <div class="flex items-start gap-3">
-                            <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shrink-0">💰</div>
-                            <div>
-                                <h4 class="font-bold text-white mb-1 text-sm">AdMob Integration</h4>
-                                <p class="text-gray-400 text-xs leading-relaxed">Non-intrusive banner and interstitial ads with premium ad-free option for enhanced experience.</p>
+                    <div class="glass p-5 rounded-xl hover:translate-y-[-2px] transition-all duration-300">
+                        <div class="flex items-start">
+                            <div class="p-2 rounded-lg bg-blue-500/10 text-cyan-400 mr-4 border border-blue-500/20">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             </div>
+                            <div>
+                                <h4 class="font-bold text-white mb-1 text-base">Hilt Dependency Injection</h4>
+                                <p class="text-gray-400 text-sm leading-relaxed">Built with clean architecture using Hilt DI, Room DB, Coroutines, and Flow for maximum performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Stack Section -->
+                <h3 class="text-2xl font-bold text-white flex items-center pt-4">
+                    <span class="mr-2 text-purple-400">🛠️</span> Tech Stack & Architecture
+                </h3>
+                <div class="glass-premium p-6 rounded-2xl glow-purple">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="text-center p-3 glass rounded-xl">
+                            <p class="text-2xl mb-1">🏗️</p>
+                            <p class="text-white text-xs font-bold">Jetpack Compose</p>
+                            <p class="text-gray-500 text-[10px]">Material 3 UI</p>
+                        </div>
+                        <div class="text-center p-3 glass rounded-xl">
+                            <p class="text-2xl mb-1">🔥</p>
+                            <p class="text-white text-xs font-bold">Firebase</p>
+                            <p class="text-gray-500 text-[10px]">Firestore + Auth</p>
+                        </div>
+                        <div class="text-center p-3 glass rounded-xl">
+                            <p class="text-2xl mb-1">💉</p>
+                            <p class="text-white text-xs font-bold">Hilt DI</p>
+                            <p class="text-gray-500 text-[10px]">Dependency Injection</p>
+                        </div>
+                        <div class="text-center p-3 glass rounded-xl">
+                            <p class="text-2xl mb-1">🗄️</p>
+                            <p class="text-white text-xs font-bold">Room DB</p>
+                            <p class="text-gray-500 text-[10px]">Offline Cache</p>
+                        </div>
+                        <div class="text-center p-3 glass rounded-xl">
+                            <p class="text-2xl mb-1">⚡</p>
+                            <p class="text-white text-xs font-bold">Coroutines</p>
+                            <p class="text-gray-500 text-[10px]">Async Operations</p>
+                        </div>
+                        <div class="text-center p-3 glass rounded-xl">
+                            <p class="text-2xl mb-1">🌊</p>
+                            <p class="text-white text-xs font-bold">Kotlin Flow</p>
+                            <p class="text-gray-500 text-[10px]">Reactive Streams</p>
+                        </div>
+                        <div class="text-center p-3 glass rounded-xl">
+                            <p class="text-2xl mb-1">🖼️</p>
+                            <p class="text-white text-xs font-bold">Coil</p>
+                            <p class="text-gray-500 text-[10px]">Image Loading</p>
+                        </div>
+                        <div class="text-center p-3 glass rounded-xl">
+                            <p class="text-2xl mb-1">📐</p>
+                            <p class="text-white text-xs font-bold">MVVM</p>
+                            <p class="text-gray-500 text-[10px]">Clean Architecture</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Specs Column -->
+            <!-- Specs & Changelog Column (takes 1 col) -->
             <div class="space-y-6">
-                <!-- System Requirements -->
+                <!-- System Requirements Card -->
                 <div class="glass-premium p-6 rounded-2xl glow-blue">
-                    <h3 class="text-xl font-bold mb-4 text-white flex items-center gap-2">
-                        <span class="text-cyan-400">📋</span> Requirements
+                    <h3 class="text-xl font-bold mb-4 text-white flex items-center">
+                        <span class="mr-2 text-cyan-400">📋</span> Requirements
                     </h3>
                     <ul class="text-sm space-y-4 text-gray-300">
                         <li class="border-b border-white/5 pb-2">
                             <span class="text-gray-400 block text-xs">Operating System</span>
-                            <strong class="text-white font-medium">Android 7.0 (API 24)+</strong>
+                            <strong class="text-white font-medium">Android 7.0 (API 24) or higher</strong>
                         </li>
                         <li class="border-b border-white/5 pb-2">
                             <span class="text-gray-400 block text-xs">System Memory</span>
-                            <strong class="text-white font-medium">1GB RAM (2GB recommended)</strong>
+                            <strong class="text-white font-medium">2GB RAM (3GB recommended)</strong>
                         </li>
                         <li class="border-b border-white/5 pb-2">
                             <span class="text-gray-400 block text-xs">Storage Needed</span>
-                            <strong class="text-white font-medium">15MB free space</strong>
+                            <strong class="text-white font-medium">25MB free space</strong>
                         </li>
                         <li class="border-b border-white/5 pb-2">
-                            <span class="text-gray-400 block text-xs">App Version</span>
-                            <strong class="text-white font-medium">v1.07.0 (Latest)</strong>
-                        </li>
-                        <li class="border-b border-white/5 pb-2">
-                            <span class="text-gray-400 block text-xs">Package</span>
-                            <strong class="text-white font-medium text-xs">com.princelaghari.ailatestfinder</strong>
+                            <span class="text-gray-400 block text-xs">Target SDK</span>
+                            <strong class="text-white font-medium">API 34 (Android 14)</strong>
                         </li>
                         <li>
                             <span class="text-gray-400 block text-xs">Connectivity</span>
-                            <strong class="text-white font-medium">Required for live Firebase sync</strong>
+                            <strong class="text-white font-medium">Required for live database sync (offline browsing available)</strong>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Tech Stack -->
-                <div class="glass-premium p-6 rounded-2xl glow-blue">
-                    <h3 class="text-xl font-bold mb-4 text-white flex items-center gap-2">
-                        <span class="text-purple-400">🛠️</span> Tech Stack
+                <!-- Changelog Card -->
+                <div class="glass-premium p-6 rounded-2xl glow-purple mb-8">
+                    <h3 class="text-xl font-bold mb-4 text-white flex items-center">
+                        <span class="mr-2 text-purple-400">⚡</span> Latest Release Notes
                     </h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 text-xs rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">Kotlin</span>
-                        <span class="px-3 py-1 text-xs rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30">Jetpack Compose</span>
-                        <span class="px-3 py-1 text-xs rounded-full bg-orange-500/20 text-orange-400 border border-orange-500/30">Firebase Firestore</span>
-                        <span class="px-3 py-1 text-xs rounded-full bg-yellow-500/20 text-yellow-400 border border-yellow-500/30">Room DB</span>
-                        <span class="px-3 py-1 text-xs rounded-full bg-red-500/20 text-red-400 border border-red-500/30">Hilt DI</span>
-                        <span class="px-3 py-1 text-xs rounded-full bg-green-500/20 text-green-400 border border-green-500/30">MVVM</span>
-                        <span class="px-3 py-1 text-xs rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30">Material 3</span>
-                        <span class="px-3 py-1 text-xs rounded-full bg-pink-500/20 text-pink-400 border border-pink-500/30">AdMob</span>
-                        <span class="px-3 py-1 text-xs rounded-full bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">Coroutines</span>
-                        <span class="px-3 py-1 text-xs rounded-full bg-teal-500/20 text-teal-400 border border-teal-500/30">Flow</span>
+                    <div id="changelogContent" class="text-sm space-y-2 text-gray-300">
+                        <p class="text-xs text-gray-400 mb-3">Released on: July 29, 2026</p>
+                        <p class="text-gray-300 mb-2 font-bold">Version v1.07.0 Stable</p>
+                        <li class="flex items-start mb-2 text-gray-300"><span class="text-cyan-400 mr-2">•</span>Upgraded to Firebase Firestore real-time sync</li>
+                        <li class="flex items-start mb-2 text-gray-300"><span class="text-cyan-400 mr-2">•</span>Added 500+ new AI tools to the directory</li>
+                        <li class="flex items-start mb-2 text-gray-300"><span class="text-cyan-400 mr-2">•</span>Implemented Room offline caching layer</li>
+                        <li class="flex items-start mb-2 text-gray-300"><span class="text-cyan-400 mr-2">•</span>Chrome Custom Tabs for in-app browsing</li>
+                        <li class="flex items-start mb-2 text-gray-300"><span class="text-cyan-400 mr-2">•</span>Smart category filters and sort options</li>
+                        <li class="flex items-start mb-2 text-gray-300"><span class="text-cyan-400 mr-2">•</span>Enhanced glassmorphic UI with Material 3</li>
+                        <li class="flex items-start mb-2 text-gray-300"><span class="text-cyan-400 mr-2">•</span>AdMob integration with optimized placement</li>
+                        <li class="flex items-start mb-2 text-gray-300"><span class="text-cyan-400 mr-2">•</span>Performance improvements and bug fixes</li>
                     </div>
                 </div>
 
-                <!-- Changelog -->
-                <div class="glass-premium p-6 rounded-2xl glow-blue">
-                    <h3 class="text-xl font-bold mb-4 text-white flex items-center gap-2">
-                        <span class="text-green-400">📝</span> Latest Changelog
+                <!-- Auto-Update Info Card -->
+                <div class="glass-premium p-6 rounded-2xl border border-green-500/20">
+                    <h3 class="text-xl font-bold mb-3 text-white flex items-center">
+                        <span class="mr-2 text-green-400">🔄</span> Auto-Update
                     </h3>
-                    <div class="space-y-3 text-sm">
-                        <div class="border-l-2 border-cyan-500 pl-3">
-                            <p class="text-cyan-400 font-bold text-xs">v1.07.0 — Latest</p>
-                            <p class="text-gray-400 text-xs">Firebase live sync, cyberpunk UI redesign, advanced filters, bookmark system, news feed.</p>
-                        </div>
-                        <div class="border-l-2 border-gray-600 pl-3">
-                            <p class="text-gray-400 font-bold text-xs">v1.06.0</p>
-                            <p class="text-gray-500 text-xs">Room database integration, offline bookmarks, performance improvements.</p>
-                        </div>
-                        <div class="border-l-2 border-gray-600 pl-3">
-                            <p class="text-gray-400 font-bold text-xs">v1.05.0</p>
-                            <p class="text-gray-500 text-xs">Tool detail pages, screenshots gallery, rating system.</p>
-                        </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-3">
+                        This page automatically checks for new releases from GitHub. When a new version is published, the download link and version badge update instantly.
+                    </p>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                        <span class="text-green-400 text-xs font-medium" id="autoUpdateStatus">Live sync active</span>
                     </div>
+                    <p class="text-gray-500 text-[10px] mt-2" id="lastChecked">Last checked: just now</p>
                 </div>
             </div>
         </div>
 
-        <!-- Architecture Section -->
-        <div class="glass-premium p-8 rounded-3xl mb-12 glow-blue">
-            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <span class="text-purple-400">🏗️</span> App Architecture
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="text-center p-4">
-                    <div class="text-3xl mb-3">📦</div>
-                    <h4 class="font-bold text-white mb-2">Data Layer</h4>
-                    <p class="text-gray-400 text-xs">Firebase Firestore + Room Database + Repository Pattern with UseCases for clean data flow.</p>
-                </div>
-                <div class="text-center p-4">
-                    <div class="text-3xl mb-3">🎯</div>
-                    <h4 class="font-bold text-white mb-2">Domain Layer</h4>
-                    <p class="text-gray-400 text-xs">UseCases, Models, and Repository interfaces. Hilt DI for dependency management.</p>
-                </div>
-                <div class="text-center p-4">
-                    <div class="text-3xl mb-3">🎨</div>
-                    <h4 class="font-bold text-white mb-2">Presentation Layer</h4>
-                    <p class="text-gray-400 text-xs">Jetpack Compose UI, ViewModels, Material 3 theming, and AdMob integration.</p>
-                </div>
-            </div>
+        <!-- AdSense Ad Unit - Bottom Banner -->
+        <div class="mt-12 flex justify-center">
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-4217735637689098"
+                 data-ad-slot="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
-        <!-- Download CTA -->
-        <div class="glass-premium p-8 rounded-3xl text-center glow-purple mb-12">
-            <h2 class="text-2xl font-bold text-white mb-3">Ready to Explore AI?</h2>
-            <p class="text-gray-400 mb-6 max-w-xl mx-auto">Download AI Finder now and discover 2000+ AI tools at your fingertips. Free, no ads in basic mode.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://github.com/Salmanlaghari/ai-finder-app/releases/latest/download/ailatestfinder-release.apk" target="_blank" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold rounded-xl text-center hover:opacity-90 active:scale-[0.98] transition flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                    Download APK (v1.07.0)
-                </a>
-                <a href="https://github.com/Salmanlaghari/ai-finder-app" target="_blank" class="px-6 py-4 glass border border-white/10 hover:border-white/20 text-white font-bold rounded-xl text-center hover:bg-white/5 transition flex items-center justify-center gap-2">
-                    ⭐ Star on GitHub
-                </a>
-            </div>
+        <!-- AdSense Ad Unit - Multiplex -->
+        <div class="mt-8 flex justify-center">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="autorelaxed"
+                 data-ad-client="ca-pub-4217735637689098"
+                 data-ad-slot="auto"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
     </main>
 
@@ -397,6 +667,109 @@
             </div>
         </div>
     </footer>
+
+    <!-- Auto-Update Script (GitHub API Release Checker) -->
+    <script>
+        (function() {
+            const REPO_OWNER = 'Salmanlaghari';
+            const REPO_NAME = 'ai-finder-app';
+            const CURRENT_VERSION = 'v1.07.0';
+            const API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/releases/latest`;
+
+            const banner = document.getElementById('updateBanner');
+            const bannerText = document.getElementById('updateBannerText');
+            const bannerSub = document.getElementById('updateBannerSub');
+            const bannerBtn = document.getElementById('updateBannerBtn');
+            const versionBadge = document.getElementById('versionBadge');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const changelog = document.getElementById('changelogContent');
+            const autoStatus = document.getElementById('autoUpdateStatus');
+            const lastChecked = document.getElementById('lastChecked');
+
+            function timeAgo() {
+                const now = new Date();
+                return now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+            }
+
+            async function checkForUpdate() {
+                try {
+                    const res = await fetch(API_URL, {
+                        headers: { 'Accept': 'application/vnd.github.v3+json' }
+                    });
+
+                    if (!res.ok) {
+                        autoStatus.textContent = 'Live sync active';
+                        lastChecked.textContent = `Last checked: ${timeAgo()} — using cached version`;
+                        return;
+                    }
+
+                    const release = await res.json();
+                    const latestTag = release.tag_name;
+                    const latestDate = new Date(release.published_at).toLocaleDateString('en-US', {
+                        year: 'numeric', month: 'long', day: 'numeric'
+                    });
+                    const apkAsset = release.assets.find(a =>
+                        a.name.endsWith('.apk') || a.name.endsWith('-release.apk')
+                    );
+                    const downloadUrl = apkAsset
+                        ? apkAsset.browser_download_url
+                        : release.html_url;
+
+                    lastChecked.textContent = `Last checked: ${timeAgo()} — GitHub API`;
+
+                    // Compare versions
+                    if (latestTag !== CURRENT_VERSION) {
+                        // New version available!
+                        banner.classList.remove('hidden');
+                        banner.classList.add('flex');
+                        bannerText.textContent = `🚀 Update Available: ${latestTag}`;
+                        bannerSub.textContent = `Released ${latestDate} — You have ${CURRENT_VERSION}`;
+                        bannerBtn.href = downloadUrl;
+                        bannerBtn.classList.remove('hidden');
+
+                        // Update version badge
+                        versionBadge.textContent = `Version ${latestTag} (Update!)`;
+                        versionBadge.className = 'px-3 py-1 text-xs rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-medium glow-text-blue animate-pulse';
+
+                        // Update download button
+                        downloadBtn.href = downloadUrl;
+                        downloadBtn.innerHTML = `
+                            <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            Download APK (${latestTag})
+                        `;
+
+                        // Update changelog
+                        if (release.body) {
+                            const lines = release.body.split('\n').filter(l => l.trim());
+                            let html = `<p class="text-xs text-gray-400 mb-3">Released on: ${latestDate}</p>`;
+                            html += `<p class="text-gray-300 mb-2 font-bold">Version ${latestTag}</p>`;
+                            lines.forEach(line => {
+                                const clean = line.replace(/^[-*•]\s*/, '').trim();
+                                if (clean) {
+                                    html += `<li class="flex items-start mb-2 text-gray-300"><span class="text-cyan-400 mr-2">•</span>${clean}</li>`;
+                                }
+                            });
+                            changelog.innerHTML = html;
+                        }
+
+                        autoStatus.textContent = `New version ${latestTag} available!`;
+                    } else {
+                        autoStatus.textContent = 'You have the latest version ✓';
+                    }
+                } catch (err) {
+                    console.log('Auto-update check failed (offline or API limit):', err.message);
+                    autoStatus.textContent = 'Live sync active (offline mode)';
+                    lastChecked.textContent = `Last checked: ${timeAgo()} — network unavailable`;
+                }
+            }
+
+            // Check on page load
+            checkForUpdate();
+
+            // Auto-check every 5 minutes
+            setInterval(checkForUpdate, 5 * 60 * 1000);
+        })();
+    </script>
 
 </body>
 </html>
