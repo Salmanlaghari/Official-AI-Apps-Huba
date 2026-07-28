@@ -132,22 +132,27 @@ APPS_METADATA = [
         "repo": "ai-finder-app",
         "category": "Productivity & Tools",
         "icon": "🔍",
-        "short_desc": "Find the perfect AI tools, models, APIs, and resources directly from your mobile device with smart filters and expert reviews.",
-        "long_desc": "AI Finder is the definitive index of artificial intelligence tools on your Android device. Browse, search, and filter through thousands of AI products, spanning content generation, image design, coding assistants, voice modulation, and predictive modeling. Keep up with the latest AI trends and explore developer APIs with ease.",
+        "short_desc": "Ultra-premium AI-powered search aggregator with Firebase live data, dark cyberpunk UI, and curated directory of 2000+ AI tools worldwide.",
+        "long_desc": "AI Finder is an ultra-premium, AI-powered online search aggregator built with Kotlin and Jetpack Compose. It connects live to Firebase Firestore to fetch, filter, and display a curated world directory of the latest AI tools inside a beautiful dark-mode cyberpunk UI layout. Browse 2000+ AI applications across categories like Content Generation, Image Design, Coding Assistants, Voice Modulation, Video Editing, Data Analysis, and Predictive Modeling. Features include real-time search, advanced category filters, tool bookmarking, detailed tool pages with screenshots and ratings, developer API references, and daily AI news updates.",
         "features": [
-            "Extensive AI Index: Over 2,000+ categorized AI applications and SaaS platforms updated daily.",
-            "Powerful Filters: Drill down by pricing model (Free, Freemium, Paid), platform, API accessibility, or tag.",
-            "Daily AI News Feed: Get concise summaries of key breakthroughs, tool launches, and industry trends.",
-            "Saved Tool Bookmarks: Synchronize your favorite resources across devices for instant access.",
-            "Developer Resources: Dedicated section for finding open-source models, training datasets, and API specs."
+            "Firebase Live Database: Real-time sync with Firestore for instant tool updates and new AI app listings.",
+            "Cyberpunk Dark UI: Stunning glassmorphic design with neon accents, smooth animations, and premium dark theme.",
+            "2000+ AI Tools Directory: Curated and categorized database covering every AI niche — text, image, code, voice, video, data.",
+            "Advanced Search & Filters: Filter by pricing (Free/Freemium/Paid), platform, category, rating, and API availability.",
+            "Tool Detail Pages: Full screenshots, feature lists, pricing info, developer links, and user ratings for each tool.",
+            "Bookmark & Favorites: Save your preferred AI tools with local Room database for offline access.",
+            "AI News Feed: Daily curated updates on new AI tool launches, breakthroughs, and industry trends.",
+            "Developer Resources: Open-source models, training datasets, API documentation, and integration guides.",
+            "Jetpack Compose UI: Modern declarative UI with Material 3, Hilt dependency injection, and MVVM architecture.",
+            "Google AdMob Integration: Non-intrusive banner and interstitial ads with premium ad-free option."
         ],
         "requirements": {
-            "os": "Android 7.0 or higher",
+            "os": "Android 7.0 (API 24) or higher",
             "ram": "1GB RAM (2GB recommended)",
             "storage": "15MB free space",
-            "internet": "Required to fetch directory database updates"
+            "internet": "Required for live Firebase data sync and tool directory updates"
         },
-        "keywords": "AI Finder, AI Tools Directory, Artificial Intelligence Apps index, find AI software, AI models finder"
+        "keywords": "AI Finder, AI Tools Directory, Artificial Intelligence Apps, find AI software, AI models finder, Prince Laghari, TEAM PK AI, Kotlin AI app, Jetpack Compose AI, Firebase AI directory"
     },
     {
         "id": "powercut-editor",
