@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Optimization -->
     <title>Official AI Apps Hub - Premium Android AI Applications | Prince Laghari & TEAM PK AI</title>
@@ -32,82 +32,8 @@
     <!-- Tailwind CSS & Custom Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <style>
-        /* Mobile-first responsive fixes */
-        @media (max-width: 640px) {
-            .hero-title { font-size: 2rem !important; line-height: 1.1 !important; }
-            .hero-subtitle { font-size: 1rem !important; }
-            .section-title { font-size: 1.75rem !important; }
-            .app-card { padding: 1rem !important; }
-            .app-card .app-icon { width: 2.75rem !important; height: 2.75rem !important; font-size: 1.5rem !important; }
-            .btn-download { padding: 0.625rem 0.75rem !important; font-size: 0.7rem !important; }
-            .btn-details { padding: 0.625rem 0.75rem !important; font-size: 0.7rem !important; }
-            .spotlight-card { padding: 1.25rem !important; }
-            .feed-card { padding: 0.875rem !important; }
-            .faq-card { padding: 1rem !important; }
-            .about-card { padding: 1.25rem !important; }
-            .nav-links { display: none !important; }
-            .mobile-menu-btn { display: flex !important; }
-            .filter-scroll { overflow-x: auto; flex-wrap: nowrap !important; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-            .filter-scroll::-webkit-scrollbar { display: none; }
-            .filter-btn { white-space: nowrap; flex-shrink: 0; }
-            .category-badge { font-size: 0.6rem !important; }
-            .version-badge { font-size: 0.55rem !important; padding: 0.2rem 0.5rem !important; }
-        }
-
-        @media (min-width: 641px) and (max-width: 1023px) {
-            .hero-title { font-size: 3rem !important; }
-            .app-card { padding: 1.25rem !important; }
-        }
-
-        /* Mobile hamburger menu */
-        .mobile-menu-btn { display: none; }
-        .mobile-nav {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(3,0,10,0.97); backdrop-filter: blur(20px);
-            z-index: 999; display: none; flex-direction: column;
-            align-items: center; justify-content: center; gap: 1.5rem;
-        }
-        .mobile-nav.active { display: flex; }
-        .mobile-nav a {
-            font-size: 1.25rem; font-weight: 700; color: #fff;
-            padding: 0.75rem 2rem; border-radius: 0.75rem;
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.3s;
-        }
-        .mobile-nav a:hover { border-color: #00e5ff; color: #00e5ff; }
-        .mobile-nav .close-btn {
-            position: absolute; top: 1rem; right: 1rem;
-            font-size: 2rem; color: #fff; background: none; border: none;
-            cursor: pointer;
-        }
-
-        /* Touch-friendly buttons */
-        @media (hover: none) and (pointer: coarse) {
-            .app-card:hover { transform: none !important; }
-            a, button { min-height: 44px; min-width: 44px; }
-        }
-
-        /* Safe area for notch devices */
-        @supports (padding-top: env(safe-area-inset-top)) {
-            header { padding-top: env(safe-area-inset-top); }
-            footer { padding-bottom: env(safe-area-inset-bottom); }
-        }
-    </style>
 </head>
 <body class="bg-[#03000a] text-gray-200 min-h-screen flex flex-col scroll-smooth">
-
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav" id="mobileNav">
-        <button class="close-btn" onclick="closeMobileNav()">✕</button>
-        <a href="#hero" onclick="closeMobileNav()">Home</a>
-        <a href="#featured" onclick="closeMobileNav()">Featured</a>
-        <a href="#apps" onclick="closeMobileNav()">All Apps</a>
-        <a href="#faq" onclick="closeMobileNav()">FAQ</a>
-        <a href="#about" onclick="closeMobileNav()">About</a>
-        <a href="https://github.com/Salmanlaghari" target="_blank">GitHub Profile</a>
-    </div>
 
     <!-- Glowing Background Blob Decorators -->
     <div class="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-purple-900/15 blur-[120px] pointer-events-none z-[-1] floating-blob"></div>
@@ -115,16 +41,15 @@
 
     <!-- Navigation Header -->
     <header class="sticky top-0 z-50 glass border-b border-white/5 shadow-lg">
-        <div class="container mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2 sm:gap-3 group">
-                <img src="assets/images/favicon.svg" alt="Logo" class="w-8 h-8 sm:w-10 sm:h-10 group-hover:scale-105 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="assets/images/favicon.svg" alt="Logo" class="w-10 h-10 group-hover:scale-105 transition-all duration-300">
                 <div class="flex flex-col">
-                    <span class="text-base sm:text-xl font-extrabold text-white tracking-wide group-hover:text-gradient-neon transition-all duration-300">AI APPS HUB</span>
-                    <span class="text-[8px] sm:text-[10px] text-gray-400 tracking-widest font-mono">PRINCE LAGHARI & TEAM PK AI</span>
+                    <span class="text-xl font-extrabold text-white tracking-wide group-hover:text-gradient-neon transition-all duration-300">AI APPS HUB</span>
+                    <span class="text-[10px] text-gray-400 tracking-widest font-mono">PRINCE LAGHARI & TEAM PK AI</span>
                 </div>
             </a>
-            <!-- Desktop Nav -->
-            <nav class="nav-links hidden md:flex items-center gap-6">
+            <nav class="hidden md:flex items-center gap-6">
                 <a href="#hero" class="text-sm font-medium text-gray-300 hover:text-white transition">Home</a>
                 <a href="#featured" class="text-sm font-medium text-gray-300 hover:text-white transition">Featured</a>
                 <a href="#apps" class="text-sm font-medium text-gray-300 hover:text-white transition">All Apps</a>
@@ -135,556 +60,759 @@
                     GitHub Profile
                 </a>
             </nav>
-            <!-- Mobile Hamburger -->
-            <button class="mobile-menu-btn items-center justify-center w-10 h-10 rounded-lg glass border border-white/10 text-white" onclick="openMobileNav()">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="container mx-auto px-4 py-10 sm:py-16 md:py-24 text-center max-w-5xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass border border-cyan-400/30 text-cyan-400 font-medium text-xs mb-6 sm:mb-8 glow-blue animate-pulse">
+    <section id="hero" class="container mx-auto px-4 py-16 md:py-24 text-center max-w-5xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass border border-cyan-400/30 text-cyan-400 font-medium text-xs mb-8 glow-blue animate-pulse">
             <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Live Release Auto-Sync Enabled
         </div>
-        <h1 class="hero-title text-3xl sm:text-4xl md:text-7xl font-extrabold tracking-tight mb-4 sm:mb-6 leading-none">
+        <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight mb-6 leading-none">
             Futuristic <span class="text-gradient-neon glow-text-purple">AI Android</span><br>
             Application Eco-System
         </h1>
-        <p class="hero-subtitle text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10">
+        <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
             Immerse yourself in premium glassmorphic mobile utilities powered by next-gen Artificial Intelligence. Light, responsive, and crafted with security first.
         </p>
-        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
-            <a href="#apps" class="px-6 sm:px-8 py-3.5 sm:py-4 w-full sm:w-auto bg-gradient-neon text-black font-bold rounded-xl shadow-lg hover:scale-[1.03] active:scale-[0.98] glow-hover-blue transition-all duration-300 text-sm sm:text-base">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#apps" class="px-8 py-4 w-full sm:w-auto bg-gradient-neon text-black font-bold rounded-xl shadow-lg hover:scale-[1.03] active:scale-[0.98] glow-hover-blue transition-all duration-300">
                 Explore All Apps
             </a>
-            <a href="#about" class="px-6 sm:px-8 py-3.5 sm:py-4 w-full sm:w-auto glass border border-white/10 hover:border-white/20 text-white font-bold rounded-xl hover:bg-white/5 active:scale-[0.98] transition text-sm sm:text-base">
+            <a href="#about" class="px-8 py-4 w-full sm:w-auto glass border border-white/10 hover:border-white/20 text-white font-bold rounded-xl hover:bg-white/5 active:scale-[0.98] transition">
                 Meet the Developer
             </a>
         </div>
     </section>
 
     <!-- Latest Releases & Updates Grid -->
-    <section class="container mx-auto px-4 py-6 sm:py-8 max-w-6xl">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+    <section class="container mx-auto px-4 py-8 max-w-6xl">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <!-- Left Side Hero Spotlight (takes 2 cols) -->
-            <div class="spotlight-card lg:col-span-2 glass-premium p-5 sm:p-8 rounded-2xl sm:rounded-3xl flex flex-col justify-between border border-cyan-400/20 glow-blue">
+            <div class="lg:col-span-2 glass-premium p-8 rounded-3xl flex flex-col justify-between border border-cyan-400/20 glow-blue">
                 <div>
                     <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-semibold tracking-wider uppercase border border-cyan-500/20">Spotlight Release</span>
-                    <h2 class="text-xl sm:text-2xl md:text-4xl font-extrabold text-white mt-3 sm:mt-4 mb-2 sm:mb-3 tracking-tight">SpellType Keyboard is Live!</h2>
-                    <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4 sm:mb-6">
+                    <h2 class="text-2xl md:text-4xl font-extrabold text-white mt-4 mb-3 tracking-tight">SpellType Keyboard is Live!</h2>
+                    <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
                         Experience next-level typing on Android. Proofread grammar, optimize tones, and customize keys with high-fidelity translucent themes. Built 100% locally with cloud advanced LLM extensions.
                     </p>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center">
-                    <a href="apps/spelltype-keyboard.html" class="px-5 sm:px-6 py-3 sm:py-3.5 bg-gradient-neon text-white font-bold rounded-xl text-center shadow-lg hover:scale-[1.02] active:scale-[0.98] transition duration-300 text-sm">
+                <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+                    <a href="apps/spelltype-keyboard.html" class="px-6 py-3.5 bg-gradient-neon text-white font-bold rounded-xl text-center shadow-lg hover:scale-[1.02] active:scale-[0.98] transition duration-300">
                         View Releases & Docs
                     </a>
-                    <a href="https://github.com/Salmanlaghari/SpellType-Keyboard" class="px-5 sm:px-6 py-3 sm:py-3.5 glass border border-white/10 text-center text-white font-semibold rounded-xl hover:bg-white/5 transition text-sm">
+                    <a href="https://github.com/Salmanlaghari/SpellType-Keyboard" class="px-6 py-3.5 glass border border-white/10 text-center text-white font-semibold rounded-xl hover:bg-white/5 transition">
                         Source Code
                     </a>
                 </div>
             </div>
 
             <!-- Right Side Feed (takes 1 col) -->
-            <div class="glass-premium p-4 sm:p-6 rounded-2xl sm:rounded-3xl flex flex-col border border-purple-500/20 glow-purple">
-                <h3 class="text-base sm:text-lg font-extrabold text-white mb-3 sm:mb-4 flex items-center gap-2">
+            <div class="glass-premium p-6 rounded-3xl flex flex-col border border-purple-500/20 glow-purple">
+                <h3 class="text-lg font-extrabold text-white mb-4 flex items-center gap-2">
                     <span class="w-2.5 h-2.5 rounded-full bg-purple-500 animate-pulse"></span> App Activity Feed
                 </h3>
-                <div class="space-y-3 sm:space-y-4 overflow-y-auto max-h-[300px] pr-1 sm:pr-2 scrollbar-thin">
-
-            <div class="feed-card glass p-3 sm:p-5 rounded-xl sm:rounded-2xl flex items-center justify-between gap-3 sm:gap-4 border border-cyan-500/10 hover:border-cyan-500/30 shadow-md">
-                <div class="flex items-center gap-3 sm:gap-4">
-                    <span class="text-2xl sm:text-3xl select-none">⌨️</span>
+                <div class="space-y-4 overflow-y-auto max-h-[300px] pr-2 scrollbar-thin">
+                    
+            <div class="glass p-5 rounded-2xl flex items-center justify-between gap-4 border border-cyan-500/10 hover:border-cyan-500/30 shadow-md">
+                <div class="flex items-center gap-4">
+                    <span class="text-3xl select-none">🎵</span>
                     <div>
-                        <h4 class="font-bold text-white text-sm sm:text-base">SpellType Keyboard</h4>
-                        <p class="text-[10px] sm:text-xs text-cyan-400 font-medium">Released v1.02.1 • Jul 25, 2026</p>
+                        <h4 class="font-bold text-white text-base">Pulse Music Player AI</h4>
+                        <p class="text-xs text-cyan-400 font-medium">Released v1.6.0 • Jul 28, 2026</p>
                     </div>
                 </div>
-                <a href="apps/spelltype-keyboard.html" class="px-3 py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold rounded-lg bg-cyan-500/10 hover:bg-cyan-500 text-cyan-400 hover:text-black border border-cyan-500/20 transition duration-300">
+                <a href="apps/pulse-music-player-ai.html" class="px-4 py-2 text-xs font-bold rounded-lg bg-cyan-500/10 hover:bg-cyan-500 text-cyan-400 hover:text-black border border-cyan-500/20 transition duration-300">
                     Changelog
                 </a>
             </div>
-
-            <div class="feed-card glass p-3 sm:p-5 rounded-xl sm:rounded-2xl flex items-center justify-between gap-3 sm:gap-4 border border-purple-500/10 hover:border-purple-500/30 shadow-md">
-                <div class="flex items-center gap-3 sm:gap-4">
-                    <span class="text-2xl sm:text-3xl select-none">🔍</span>
+            
+            <div class="glass p-5 rounded-2xl flex items-center justify-between gap-4 border border-cyan-500/10 hover:border-cyan-500/30 shadow-md">
+                <div class="flex items-center gap-4">
+                    <span class="text-3xl select-none">⌨️</span>
                     <div>
-                        <h4 class="font-bold text-white text-sm sm:text-base">AI Finder</h4>
-                        <p class="text-[10px] sm:text-xs text-purple-400 font-medium">Available Now</p>
+                        <h4 class="font-bold text-white text-base">SpellType Keyboard</h4>
+                        <p class="text-xs text-cyan-400 font-medium">Released v1.02.1 • Jul 25, 2026</p>
                     </div>
                 </div>
-                <a href="apps/ai-finder.html" class="px-3 py-1.5 sm:py-2 text-[10px] sm:text-xs font-bold rounded-lg bg-purple-500/10 hover:bg-purple-500 text-purple-400 hover:text-black border border-purple-500/20 transition duration-300">
+                <a href="apps/spelltype-keyboard.html" class="px-4 py-2 text-xs font-bold rounded-lg bg-cyan-500/10 hover:bg-cyan-500 text-cyan-400 hover:text-black border border-cyan-500/20 transition duration-300">
                     Changelog
                 </a>
             </div>
-
+            
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Featured Section -->
-    <section id="featured" class="container mx-auto px-4 py-10 sm:py-16 max-w-6xl">
-        <div class="text-center md:text-left mb-8 sm:mb-10">
-            <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">Featured Ecosystem Utilities</h2>
+    <section id="featured" class="container mx-auto px-4 py-16 max-w-6xl">
+        <div class="text-center md:text-left mb-10">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Featured Ecosystem Utilities</h2>
             <p class="text-gray-400 mt-2 text-sm md:text-base">Curated high-performance utilities pushing the boundary of mobile AI.</p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-
-        <!-- SpellType Keyboard — DOWNLOAD -->
-        <div class="app-card glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Productivity & Tools" data-name="spelltype keyboard" data-released="true">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Productivity & Tools" data-name="spelltype keyboard" data-released="true">
             <div>
-                <div class="flex items-center justify-between mb-4 sm:mb-5">
-                    <span class="category-badge text-[10px] sm:text-xs uppercase font-mono tracking-widest text-purple-400">Productivity & Tools</span>
-                    <span class="version-badge px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] rounded-full font-medium bg-green-500/20 text-green-400 border border-green-500/30">v1.02.1</span>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">Productivity & Tools</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-green-500/20 text-green-400 border border-green-500/30">Version v1.02.1</span>
                 </div>
-                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div class="app-icon w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-2xl sm:text-3xl shadow-lg shrink-0 select-none">⌨️</div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        ⌨️
+                    </div>
                     <div>
-                        <h3 class="font-extrabold text-white text-base sm:text-lg tracking-tight leading-tight">SpellType Keyboard</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-1">Repo: SpellType-Keyboard</p>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">SpellType Keyboard</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: SpellType-Keyboard</p>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 sm:mb-6">
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
                     Next-gen AI-powered keyboard with advanced typo correction, real-time grammar checking, smart predictions, and glassmorphism styling.
                 </p>
             </div>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
-                <a href="apps/spelltype-keyboard.html" class="btn-details px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
-                    Details
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/spelltype-keyboard.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
                 </a>
-                <a href="https://github.com/Salmanlaghari/SpellType-Keyboard/releases/tag/v1.02.1" target="_blank" class="btn-download px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-black bg-gradient-neon rounded-lg glow-blue hover:scale-[1.02] active:scale-[0.98] transition">
-                    ⬇ Download
-                </a>
+                <a href='https://github.com/Salmanlaghari/SpellType-Keyboard/releases/tag/v1.02.1' target='_blank' class='px-3 py-2.5 text-xs text-center font-bold text-black bg-gradient-neon rounded-lg glow-blue hover:scale-[1.02] transition'>Download APK</a>
             </div>
         </div>
-
-        <!-- AI Finder — DOWNLOAD -->
-        <div class="app-card glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-purple" data-category="Productivity & Tools" data-name="ai finder" data-released="true">
+        
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="AI Assistants" data-name="pk ai" data-released="false">
             <div>
-                <div class="flex items-center justify-between mb-4 sm:mb-5">
-                    <span class="category-badge text-[10px] sm:text-xs uppercase font-mono tracking-widest text-purple-400">Productivity & Tools</span>
-                    <span class="version-badge px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] rounded-full font-medium bg-green-500/20 text-green-400 border border-green-500/30">Available</span>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">AI Assistants</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
                 </div>
-                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div class="app-icon w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-2xl sm:text-3xl shadow-lg shrink-0 select-none">🔍</div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        🇵🇰
+                    </div>
                     <div>
-                        <h3 class="font-extrabold text-white text-base sm:text-lg tracking-tight leading-tight">AI Finder</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-1">Repo: ai-finder-app</p>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">PK AI</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: PK-AI</p>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 sm:mb-6">
-                    Ultra-premium AI-powered search aggregator with Firebase live data, dark cyberpunk UI, and curated directory of 2000+ AI tools worldwide.
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                    Pakistan's first fully-localized conversational AI assistant trained on local culture, language, laws, history, and daily utility.
                 </p>
             </div>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
-                <a href="apps/ai-finder.html" class="btn-details px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
-                    Details
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/pk-ai.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
                 </a>
-                <a href="https://github.com/Salmanlaghari/ai-finder-app/releases" target="_blank" class="btn-download px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-black bg-gradient-neon rounded-lg glow-purple hover:scale-[1.02] active:scale-[0.98] transition">
-                    ⬇ Download
-                </a>
+                <button disabled class='px-3 py-2.5 text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed'>Coming Soon</button>
             </div>
         </div>
-
-        <!-- Click Browser — COMING SOON -->
-        <div class="app-card glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Communication & Browsing" data-name="click browser" data-released="false">
+        
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Music & Audio" data-name="pulse music player ai" data-released="true">
             <div>
-                <div class="flex items-center justify-between mb-4 sm:mb-5">
-                    <span class="category-badge text-[10px] sm:text-xs uppercase font-mono tracking-widest text-purple-400">Communication & Browsing</span>
-                    <span class="version-badge px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">Music & Audio</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-green-500/20 text-green-400 border border-green-500/30">Version v1.6.0</span>
                 </div>
-                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div class="app-icon w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-2xl sm:text-3xl shadow-lg shrink-0 select-none">🌐</div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        🎵
+                    </div>
                     <div>
-                        <h3 class="font-extrabold text-white text-base sm:text-lg tracking-tight leading-tight">Click Browser</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-1">Repo: Click</p>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">Pulse Music Player AI</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: Pulse-Music-Player-AI</p>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 sm:mb-6">
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                    Intelligent offline & online music player that auto-categorizes, recommends tracks, and dynamically enhances acoustics using real-time AI filters.
+                </p>
+            </div>
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/pulse-music-player-ai.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
+                </a>
+                <a href='https://github.com/Salmanlaghari/Pulse-Music-Player-AI/releases/download/v1.6.0/app-debug.apk' target='_blank' class='px-3 py-2.5 text-xs text-center font-bold text-black bg-gradient-neon rounded-lg glow-blue hover:scale-[1.02] transition'>Download APK</a>
+            </div>
+        </div>
+        
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Communication & Browsing" data-name="click browser" data-released="false">
+            <div>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">Communication & Browsing</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
+                </div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        🌐
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">Click Browser</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: Click</p>
+                    </div>
+                </div>
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
                     Ultra-fast, secure, and lightweight web browser with built-in ad blocker, AI page summarizer, and deep privacy safeguards.
                 </p>
             </div>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
-                <a href="apps/click-browser.html" class="btn-details px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
-                    Details
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/click-browser.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
                 </a>
-                <button disabled class="btn-download px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed">Coming Soon</button>
+                <button disabled class='px-3 py-2.5 text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed'>Coming Soon</button>
             </div>
         </div>
-
+        
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Video & Photo" data-name="powercut editor" data-released="false">
+            <div>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">Video & Photo</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
+                </div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        🎬
+                    </div>
+                    <div>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">PowerCut Editor</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: PowerCut-Editor</p>
+                    </div>
+                </div>
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                    Premium, lightweight AI-driven video editor featuring auto-scene cuts, cinematic effects, dynamic subtitles, and 4K output.
+                </p>
+            </div>
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/powercut-editor.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
+                </a>
+                <button disabled class='px-3 py-2.5 text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed'>Coming Soon</button>
+            </div>
+        </div>
+        
         </div>
     </section>
 
     <!-- Interactive Apps Directory -->
-    <section id="apps" class="container mx-auto px-4 py-10 sm:py-16 max-w-6xl">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 mb-8 sm:mb-10 border-b border-white/5 pb-6 sm:pb-8">
+    <section id="apps" class="container mx-auto px-4 py-16 max-w-6xl">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-10 border-b border-white/5 pb-8">
             <div class="text-center md:text-left">
-                <h2 class="section-title text-2xl sm:text-3xl md:text-5xl font-extrabold text-white tracking-tight">Full Applications Registry</h2>
-                <p class="text-gray-400 mt-2 text-xs sm:text-sm">Use filters or search to traverse our catalog.</p>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">Full Applications Registry</h2>
+                <p class="text-gray-400 mt-2 text-sm">Use filters or active keywords search to traverse our catalog.</p>
             </div>
+
+            <!-- Live Search Bar -->
             <div class="relative w-full md:w-80">
                 <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-gray-400">
-                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                 </span>
-                <input type="text" id="searchInput" onkeyup="filterSearch()" placeholder="Search applications..." class="w-full pl-9 sm:pl-10 pr-4 py-2.5 sm:py-3 bg-[#0c0c16]/90 border border-white/10 hover:border-cyan-400/40 focus:border-cyan-400 focus:glow-blue rounded-xl text-sm text-white placeholder-gray-500 focus:outline-none transition duration-300">
+                <input type="text" id="searchInput" onkeyup="filterSearch()" placeholder="Search applications..." class="w-full pl-10 pr-4 py-3 bg-[#0c0c16]/90 border border-white/10 hover:border-cyan-400/40 focus:border-cyan-400 focus:glow-blue rounded-xl text-sm text-white placeholder-gray-500 focus:outline-none transition duration-300">
             </div>
         </div>
 
-        <!-- Filters -->
-        <div class="filter-scroll flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10 justify-center md:justify-start">
-            <button onclick="filterCategory('All')" class="filter-btn category-btn px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold rounded-full bg-cyan-500 text-black border border-cyan-500/30 shadow-lg glow-blue transition duration-300">All</button>
-            <button onclick="filterCategory('AI Assistants')" class="filter-btn category-btn px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">AI Assistants</button>
-            <button onclick="filterCategory('Communication & Browsing')" class="filter-btn category-btn px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">Browsing</button>
-            <button onclick="filterCategory('Education & Tech')" class="filter-btn category-btn px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">Education</button>
-            <button onclick="filterCategory('Entertainment')" class="filter-btn category-btn px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">Entertainment</button>
-            <button onclick="filterCategory('Health & Fitness')" class="filter-btn category-btn px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">Health</button>
-            <button onclick="filterCategory('Music & Audio')" class="filter-btn category-btn px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">Music</button>
-            <button onclick="filterCategory('Productivity & Tools')" class="filter-btn category-btn px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">Productivity</button>
-            <button onclick="filterCategory('Social & Creation')" class="filter-btn category-btn px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">Social</button>
-            <button onclick="filterCategory('Video & Photo')" class="filter-btn category-btn px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">Video</button>
+        <!-- Filters Grid -->
+        <div class="flex flex-wrap gap-3 mb-10 justify-center md:justify-start">
+            
+    <button onclick="filterCategory('All')" class="category-btn px-4 py-2 text-xs font-semibold rounded-full bg-cyan-500 text-black border border-cyan-500/30 shadow-lg glow-blue transition duration-300">
+        All Applications
+    </button>
+    
+        <button onclick="filterCategory('AI Assistants')" class="category-btn px-4 py-2 text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">
+            AI Assistants
+        </button>
+        
+        <button onclick="filterCategory('Communication & Browsing')" class="category-btn px-4 py-2 text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">
+            Communication & Browsing
+        </button>
+        
+        <button onclick="filterCategory('Education & Tech')" class="category-btn px-4 py-2 text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">
+            Education & Tech
+        </button>
+        
+        <button onclick="filterCategory('Entertainment')" class="category-btn px-4 py-2 text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">
+            Entertainment
+        </button>
+        
+        <button onclick="filterCategory('Health & Fitness')" class="category-btn px-4 py-2 text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">
+            Health & Fitness
+        </button>
+        
+        <button onclick="filterCategory('Music & Audio')" class="category-btn px-4 py-2 text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">
+            Music & Audio
+        </button>
+        
+        <button onclick="filterCategory('Productivity & Tools')" class="category-btn px-4 py-2 text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">
+            Productivity & Tools
+        </button>
+        
+        <button onclick="filterCategory('Social & Creation')" class="category-btn px-4 py-2 text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">
+            Social & Creation
+        </button>
+        
+        <button onclick="filterCategory('Video & Photo')" class="category-btn px-4 py-2 text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300">
+            Video & Photo
+        </button>
+        
         </div>
 
         <!-- Directory Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="appsContainer">
-
-        <!-- 1. SpellType Keyboard — DOWNLOAD -->
-        <div class="app-card glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Productivity & Tools" data-name="spelltype keyboard" data-released="true">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="appsContainer">
+            
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Productivity & Tools" data-name="spelltype keyboard" data-released="true">
             <div>
-                <div class="flex items-center justify-between mb-4 sm:mb-5">
-                    <span class="category-badge text-[10px] sm:text-xs uppercase font-mono tracking-widest text-purple-400">Productivity & Tools</span>
-                    <span class="version-badge px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] rounded-full font-medium bg-green-500/20 text-green-400 border border-green-500/30">v1.02.1</span>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">Productivity & Tools</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-green-500/20 text-green-400 border border-green-500/30">Version v1.02.1</span>
                 </div>
-                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div class="app-icon w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-2xl sm:text-3xl shadow-lg shrink-0 select-none">⌨️</div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        ⌨️
+                    </div>
                     <div>
-                        <h3 class="font-extrabold text-white text-base sm:text-lg tracking-tight leading-tight">SpellType Keyboard</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-1">Repo: SpellType-Keyboard</p>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">SpellType Keyboard</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: SpellType-Keyboard</p>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 sm:mb-6">Next-gen AI-powered keyboard with advanced typo correction, real-time grammar checking, smart predictions, and glassmorphism styling.</p>
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                    Next-gen AI-powered keyboard with advanced typo correction, real-time grammar checking, smart predictions, and glassmorphism styling.
+                </p>
             </div>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
-                <a href="apps/spelltype-keyboard.html" class="btn-details px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">Details</a>
-                <a href="https://github.com/Salmanlaghari/SpellType-Keyboard/releases/tag/v1.02.1" target="_blank" class="btn-download px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-black bg-gradient-neon rounded-lg glow-blue hover:scale-[1.02] active:scale-[0.98] transition">⬇ Download</a>
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/spelltype-keyboard.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
+                </a>
+                <a href='https://github.com/Salmanlaghari/SpellType-Keyboard/releases/tag/v1.02.1' target='_blank' class='px-3 py-2.5 text-xs text-center font-bold text-black bg-gradient-neon rounded-lg glow-blue hover:scale-[1.02] transition'>Download APK</a>
             </div>
         </div>
-
-        <!-- 2. AI Finder — DOWNLOAD -->
-        <div class="app-card glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-purple" data-category="Productivity & Tools" data-name="ai finder" data-released="true">
+        
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="AI Assistants" data-name="pk ai" data-released="false">
             <div>
-                <div class="flex items-center justify-between mb-4 sm:mb-5">
-                    <span class="category-badge text-[10px] sm:text-xs uppercase font-mono tracking-widest text-purple-400">Productivity & Tools</span>
-                    <span class="version-badge px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] rounded-full font-medium bg-green-500/20 text-green-400 border border-green-500/30">Available</span>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">AI Assistants</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
                 </div>
-                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div class="app-icon w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-2xl sm:text-3xl shadow-lg shrink-0 select-none">🔍</div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        🇵🇰
+                    </div>
                     <div>
-                        <h3 class="font-extrabold text-white text-base sm:text-lg tracking-tight leading-tight">AI Finder</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-1">Repo: ai-finder-app</p>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">PK AI</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: PK-AI</p>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 sm:mb-6">Ultra-premium AI-powered search aggregator with Firebase live data, dark cyberpunk UI, and curated directory of 2000+ AI tools worldwide.</p>
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                    Pakistan's first fully-localized conversational AI assistant trained on local culture, language, laws, history, and daily utility.
+                </p>
             </div>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
-                <a href="apps/ai-finder.html" class="btn-details px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">Details</a>
-                <a href="https://github.com/Salmanlaghari/ai-finder-app/releases" target="_blank" class="btn-download px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-black bg-gradient-neon rounded-lg glow-purple hover:scale-[1.02] active:scale-[0.98] transition">⬇ Download</a>
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/pk-ai.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
+                </a>
+                <button disabled class='px-3 py-2.5 text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed'>Coming Soon</button>
             </div>
         </div>
-
-        <!-- 3. PK AI — COMING SOON -->
-        <div class="app-card glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="AI Assistants" data-name="pk ai" data-released="false">
+        
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Music & Audio" data-name="pulse music player ai" data-released="true">
             <div>
-                <div class="flex items-center justify-between mb-4 sm:mb-5">
-                    <span class="category-badge text-[10px] sm:text-xs uppercase font-mono tracking-widest text-purple-400">AI Assistants</span>
-                    <span class="version-badge px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">Music & Audio</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-green-500/20 text-green-400 border border-green-500/30">Version v1.6.0</span>
                 </div>
-                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div class="app-icon w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-2xl sm:text-3xl shadow-lg shrink-0 select-none">🇵🇰</div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        🎵
+                    </div>
                     <div>
-                        <h3 class="font-extrabold text-white text-base sm:text-lg tracking-tight leading-tight">PK AI</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-1">Repo: PK-AI</p>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">Pulse Music Player AI</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: Pulse-Music-Player-AI</p>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 sm:mb-6">Pakistan's first fully-localized conversational AI assistant trained on local culture, language, laws, history, and daily utility.</p>
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                    Intelligent offline & online music player that auto-categorizes, recommends tracks, and dynamically enhances acoustics using real-time AI filters.
+                </p>
             </div>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
-                <a href="apps/pk-ai.html" class="btn-details px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">Details</a>
-                <button disabled class="btn-download px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed">Coming Soon</button>
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/pulse-music-player-ai.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
+                </a>
+                <a href='https://github.com/Salmanlaghari/Pulse-Music-Player-AI/releases/download/v1.6.0/app-debug.apk' target='_blank' class='px-3 py-2.5 text-xs text-center font-bold text-black bg-gradient-neon rounded-lg glow-blue hover:scale-[1.02] transition'>Download APK</a>
             </div>
         </div>
-
-        <!-- 4. Pulse Music Player AI — COMING SOON -->
-        <div class="app-card glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Music & Audio" data-name="pulse music player ai" data-released="false">
+        
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Entertainment" data-name="rising flix" data-released="false">
             <div>
-                <div class="flex items-center justify-between mb-4 sm:mb-5">
-                    <span class="category-badge text-[10px] sm:text-xs uppercase font-mono tracking-widest text-purple-400">Music & Audio</span>
-                    <span class="version-badge px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">Entertainment</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
                 </div>
-                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div class="app-icon w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-2xl sm:text-3xl shadow-lg shrink-0 select-none">🎵</div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        🍿
+                    </div>
                     <div>
-                        <h3 class="font-extrabold text-white text-base sm:text-lg tracking-tight leading-tight">Pulse Music Player AI</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-1">Repo: Pulse-Music-Player-AI</p>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">Rising Flix</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: Rising-Flix</p>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 sm:mb-6">Intelligent offline & online music player that auto-categorizes, recommends tracks, and dynamically enhances acoustics using real-time AI filters.</p>
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                    The ultimate personalized movie, series, and anime tracking platform powered by smart recommendation engines.
+                </p>
             </div>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
-                <a href="apps/pulse-music-player-ai.html" class="btn-details px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">Details</a>
-                <button disabled class="btn-download px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed">Coming Soon</button>
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/rising-flix.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
+                </a>
+                <button disabled class='px-3 py-2.5 text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed'>Coming Soon</button>
             </div>
         </div>
-
-        <!-- 5. Rising Flix — COMING SOON -->
-        <div class="app-card glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Entertainment" data-name="rising flix" data-released="false">
+        
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Communication & Browsing" data-name="click browser" data-released="false">
             <div>
-                <div class="flex items-center justify-between mb-4 sm:mb-5">
-                    <span class="category-badge text-[10px] sm:text-xs uppercase font-mono tracking-widest text-purple-400">Entertainment</span>
-                    <span class="version-badge px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">Communication & Browsing</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
                 </div>
-                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div class="app-icon w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-2xl sm:text-3xl shadow-lg shrink-0 select-none">🍿</div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        🌐
+                    </div>
                     <div>
-                        <h3 class="font-extrabold text-white text-base sm:text-lg tracking-tight leading-tight">Rising Flix</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-1">Repo: Rising-Flix</p>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">Click Browser</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: Click</p>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 sm:mb-6">The ultimate personalized movie, series, and anime tracking platform powered by smart recommendation engines.</p>
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                    Ultra-fast, secure, and lightweight web browser with built-in ad blocker, AI page summarizer, and deep privacy safeguards.
+                </p>
             </div>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
-                <a href="apps/rising-flix.html" class="btn-details px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">Details</a>
-                <button disabled class="btn-download px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed">Coming Soon</button>
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/click-browser.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
+                </a>
+                <button disabled class='px-3 py-2.5 text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed'>Coming Soon</button>
             </div>
         </div>
-
-        <!-- 6. Click Browser — COMING SOON -->
-        <div class="app-card glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Communication & Browsing" data-name="click browser" data-released="false">
+        
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Productivity & Tools" data-name="ai finder" data-released="false">
             <div>
-                <div class="flex items-center justify-between mb-4 sm:mb-5">
-                    <span class="category-badge text-[10px] sm:text-xs uppercase font-mono tracking-widest text-purple-400">Communication & Browsing</span>
-                    <span class="version-badge px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">Productivity & Tools</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
                 </div>
-                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div class="app-icon w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-2xl sm:text-3xl shadow-lg shrink-0 select-none">🌐</div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        🔍
+                    </div>
                     <div>
-                        <h3 class="font-extrabold text-white text-base sm:text-lg tracking-tight leading-tight">Click Browser</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-1">Repo: Click</p>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">AI Finder</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: ai-finder-app</p>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 sm:mb-6">Ultra-fast, secure, and lightweight web browser with built-in ad blocker, AI page summarizer, and deep privacy safeguards.</p>
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                    Ultra-premium AI-powered search aggregator with Firebase live data, dark cyberpunk UI, and curated directory of 2000+ AI tools worldwide.
+                </p>
             </div>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
-                <a href="apps/click-browser.html" class="btn-details px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">Details</a>
-                <button disabled class="btn-download px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed">Coming Soon</button>
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/ai-finder.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
+                </a>
+                <button disabled class='px-3 py-2.5 text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed'>Coming Soon</button>
             </div>
         </div>
-
-        <!-- 7. PowerCut Editor — COMING SOON -->
-        <div class="app-card glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Video & Photo" data-name="powercut editor" data-released="false">
+        
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Video & Photo" data-name="powercut editor" data-released="false">
             <div>
-                <div class="flex items-center justify-between mb-4 sm:mb-5">
-                    <span class="category-badge text-[10px] sm:text-xs uppercase font-mono tracking-widest text-purple-400">Video & Photo</span>
-                    <span class="version-badge px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">Video & Photo</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
                 </div>
-                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div class="app-icon w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-2xl sm:text-3xl shadow-lg shrink-0 select-none">🎬</div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        🎬
+                    </div>
                     <div>
-                        <h3 class="font-extrabold text-white text-base sm:text-lg tracking-tight leading-tight">PowerCut Editor</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-1">Repo: PowerCut-Editor</p>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">PowerCut Editor</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: PowerCut-Editor</p>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 sm:mb-6">Premium, lightweight AI-driven video editor featuring auto-scene cuts, cinematic effects, dynamic subtitles, and 4K output.</p>
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                    Premium, lightweight AI-driven video editor featuring auto-scene cuts, cinematic effects, dynamic subtitles, and 4K output.
+                </p>
             </div>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
-                <a href="apps/powercut-editor.html" class="btn-details px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">Details</a>
-                <button disabled class="btn-download px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed">Coming Soon</button>
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/powercut-editor.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
+                </a>
+                <button disabled class='px-3 py-2.5 text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed'>Coming Soon</button>
             </div>
         </div>
-
-        <!-- 8. FilmHub Premium — COMING SOON -->
-        <div class="app-card glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Entertainment" data-name="filmhub premium" data-released="false">
+        
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Entertainment" data-name="filmhub premium" data-released="false">
             <div>
-                <div class="flex items-center justify-between mb-4 sm:mb-5">
-                    <span class="category-badge text-[10px] sm:text-xs uppercase font-mono tracking-widest text-purple-400">Entertainment</span>
-                    <span class="version-badge px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">Entertainment</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
                 </div>
-                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div class="app-icon w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-2xl sm:text-3xl shadow-lg shrink-0 select-none">🎞️</div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        🎞️
+                    </div>
                     <div>
-                        <h3 class="font-extrabold text-white text-base sm:text-lg tracking-tight leading-tight">FilmHub Premium</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-1">Repo: FilmHub-Premium</p>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">FilmHub Premium</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: FilmHub-Premium</p>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 sm:mb-6">High-definition cataloging, global reviews, custom watchlists, and smart AI recommendations for movie lovers.</p>
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                    High-definition cataloging, global reviews, custom watchlists, and smart AI recommendations for movie lovers.
+                </p>
             </div>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
-                <a href="apps/filmhub-premium.html" class="btn-details px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">Details</a>
-                <button disabled class="btn-download px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed">Coming Soon</button>
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/filmhub-premium.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
+                </a>
+                <button disabled class='px-3 py-2.5 text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed'>Coming Soon</button>
             </div>
         </div>
-
-        <!-- 9. HACK AI — COMING SOON -->
-        <div class="app-card glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Education & Tech" data-name="hack ai" data-released="false">
+        
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Education & Tech" data-name="hack ai" data-released="false">
             <div>
-                <div class="flex items-center justify-between mb-4 sm:mb-5">
-                    <span class="category-badge text-[10px] sm:text-xs uppercase font-mono tracking-widest text-purple-400">Education & Tech</span>
-                    <span class="version-badge px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">Education & Tech</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
                 </div>
-                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div class="app-icon w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-2xl sm:text-3xl shadow-lg shrink-0 select-none">🛡️</div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        🛡️
+                    </div>
                     <div>
-                        <h3 class="font-extrabold text-white text-base sm:text-lg tracking-tight leading-tight">HACK AI</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-1">Repo: HACK-AI</p>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">HACK AI</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: HACK-AI</p>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 sm:mb-6">Advanced cybersecurity helper offering secure code reviews, penetration testing tutorials, and vulnerability assessment guides.</p>
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                    Advanced cybersecurity helper offering secure code reviews, penetration testing tutorials, and vulnerability assessment guides.
+                </p>
             </div>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
-                <a href="apps/hack-ai.html" class="btn-details px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">Details</a>
-                <button disabled class="btn-download px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed">Coming Soon</button>
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/hack-ai.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
+                </a>
+                <button disabled class='px-3 py-2.5 text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed'>Coming Soon</button>
             </div>
         </div>
-
-        <!-- 10. Medical Research — COMING SOON -->
-        <div class="app-card glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Health & Fitness" data-name="medical research" data-released="false">
+        
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Health & Fitness" data-name="medical research" data-released="false">
             <div>
-                <div class="flex items-center justify-between mb-4 sm:mb-5">
-                    <span class="category-badge text-[10px] sm:text-xs uppercase font-mono tracking-widest text-purple-400">Health & Fitness</span>
-                    <span class="version-badge px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">Health & Fitness</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
                 </div>
-                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div class="app-icon w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-2xl sm:text-3xl shadow-lg shrink-0 select-none">🩺</div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        🩺
+                    </div>
                     <div>
-                        <h3 class="font-extrabold text-white text-base sm:text-lg tracking-tight leading-tight">Medical Research</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-1">Repo: Medical-Research</p>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">Medical Research</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: Medical-Research</p>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 sm:mb-6">AI-powered clinical search tool, medical dictionary, and research paper helper tailored for students and healthcare professionals.</p>
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                    AI-powered clinical search tool, medical dictionary, and research paper helper tailored for students and healthcare professionals.
+                </p>
             </div>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
-                <a href="apps/medical-research.html" class="btn-details px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">Details</a>
-                <button disabled class="btn-download px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed">Coming Soon</button>
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/medical-research.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
+                </a>
+                <button disabled class='px-3 py-2.5 text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed'>Coming Soon</button>
             </div>
         </div>
-
-        <!-- 11. Fliki Pro — COMING SOON -->
-        <div class="app-card glass p-4 sm:p-6 rounded-2xl sm:rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Social & Creation" data-name="fliki pro" data-released="false">
+        
+        <div class="app-card glass p-6 rounded-3xl hover:translate-y-[-4px] flex flex-col justify-between glow-hover-blue" data-category="Social & Creation" data-name="fliki pro" data-released="false">
             <div>
-                <div class="flex items-center justify-between mb-4 sm:mb-5">
-                    <span class="category-badge text-[10px] sm:text-xs uppercase font-mono tracking-widest text-purple-400">Social & Creation</span>
-                    <span class="version-badge px-2 sm:px-2.5 py-0.5 text-[9px] sm:text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
+                <!-- Header Badge -->
+                <div class="flex items-center justify-between mb-5">
+                    <span class="text-xs uppercase font-mono tracking-widest text-purple-400">Social & Creation</span>
+                    <span class="px-2.5 py-0.5 text-[10px] rounded-full font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20">Upcoming</span>
                 </div>
-                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                    <div class="app-icon w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-2xl sm:text-3xl shadow-lg shrink-0 select-none">⚡</div>
+                <!-- App Icon & Title -->
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-neon flex items-center justify-center text-3xl shadow-lg shrink-0 select-none">
+                        ⚡
+                    </div>
                     <div>
-                        <h3 class="font-extrabold text-white text-base sm:text-lg tracking-tight leading-tight">Fliki Pro</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-400 mt-1">Repo: Fliki-Pro</p>
+                        <h3 class="font-extrabold text-white text-lg tracking-tight leading-tight">Fliki Pro</h3>
+                        <p class="text-xs text-gray-400 mt-1">Repo: Fliki-Pro</p>
                     </div>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed mb-4 sm:mb-6">Turn simple ideas into high-quality social posts, studio-grade voiceovers, and captivating short-form videos in seconds.</p>
+                <!-- Description -->
+                <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                    Turn simple ideas into high-quality social posts, studio-grade voiceovers, and captivating short-form videos in seconds.
+                </p>
             </div>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
-                <a href="apps/fliki-pro.html" class="btn-details px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">Details</a>
-                <button disabled class="btn-download px-2 sm:px-3 py-2 sm:py-2.5 text-[10px] sm:text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed">Coming Soon</button>
+            <!-- Action Buttons -->
+            <div class="grid grid-cols-2 gap-3 pt-4 border-t border-white/5">
+                <a href="apps/fliki-pro.html" class="px-3 py-2.5 text-xs text-center font-bold text-gray-300 hover:text-white glass border border-white/10 hover:border-white/20 rounded-lg transition">
+                    Details & Specs
+                </a>
+                <button disabled class='px-3 py-2.5 text-xs text-center font-bold text-gray-600 bg-gray-900 border border-gray-800 rounded-lg cursor-not-allowed'>Coming Soon</button>
             </div>
         </div>
-
+        
         </div>
     </section>
 
     <!-- FAQ Accordion Section -->
-    <section id="faq" class="container mx-auto px-4 py-10 sm:py-16 max-w-4xl">
-        <div class="text-center mb-10 sm:mb-12">
-            <h2 class="section-title text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">Frequently Asked Questions</h2>
-            <p class="text-gray-400 mt-2 text-xs sm:text-sm">Everything you need to know about the eco-system software and downloads.</p>
+    <section id="faq" class="container mx-auto px-4 py-16 max-w-4xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">Frequently Asked Questions</h2>
+            <p class="text-gray-400 mt-2 text-sm">Everything you need to know about the eco-system software and downloads.</p>
         </div>
-        <div class="space-y-3 sm:space-y-4">
-
-        <div class="faq-card glass p-4 sm:p-5 rounded-xl sm:rounded-2xl glow-blue border border-white/5">
+        <div class="space-y-4">
+            
+        <div class="glass p-5 rounded-2xl glow-blue border border-white/5">
             <button class="w-full text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(0)">
-                <span class="font-bold text-white text-sm sm:text-base pr-4">What is the Official AI Apps Hub?</span>
+                <span class="font-bold text-white text-base pr-4">What is the Official AI Apps Hub?</span>
                 <span id="faq-icon-0" class="text-cyan-400 transition-transform duration-300 transform shrink-0">
-                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
                 </span>
             </button>
-            <div id="faq-ans-0" class="hidden mt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
+            <div id="faq-ans-0" class="hidden mt-3 text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
                 It is the premier digital landing and update page for all Android applications developed by Prince Laghari & TEAM PK AI, focusing on cutting-edge Glassmorphism designs and AI-infused productivity tools.
             </div>
         </div>
-
-        <div class="faq-card glass p-4 sm:p-5 rounded-xl sm:rounded-2xl glow-blue border border-white/5">
+        
+        <div class="glass p-5 rounded-2xl glow-blue border border-white/5">
             <button class="w-full text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(1)">
-                <span class="font-bold text-white text-sm sm:text-base pr-4">Are these applications safe to download and install?</span>
+                <span class="font-bold text-white text-base pr-4">Are these applications safe to download and install?</span>
                 <span id="faq-icon-1" class="text-cyan-400 transition-transform duration-300 transform shrink-0">
-                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
                 </span>
             </button>
-            <div id="faq-ans-1" class="hidden mt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
+            <div id="faq-ans-1" class="hidden mt-3 text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
                 Yes, absolutely! All applications are open-source, built securely, and signed with developer-grade certificates. You can verify and review the full source code in their respective GitHub repositories.
             </div>
         </div>
-
-        <div class="faq-card glass p-4 sm:p-5 rounded-xl sm:rounded-2xl glow-blue border border-white/5">
+        
+        <div class="glass p-5 rounded-2xl glow-blue border border-white/5">
             <button class="w-full text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(2)">
-                <span class="font-bold text-white text-sm sm:text-base pr-4">How can I update my installed apps?</span>
+                <span class="font-bold text-white text-base pr-4">How can I update my installed apps?</span>
                 <span id="faq-icon-2" class="text-cyan-400 transition-transform duration-300 transform shrink-0">
-                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
                 </span>
             </button>
-            <div id="faq-ans-2" class="hidden mt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
+            <div id="faq-ans-2" class="hidden mt-3 text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
                 The Official AI Apps Hub features auto-detection of GitHub Releases. Whenever a new stable version is pushed, this website will instantly highlight the version number, changelog, and dynamic download links for the updated APK files.
             </div>
         </div>
-
-        <div class="faq-card glass p-4 sm:p-5 rounded-xl sm:rounded-2xl glow-blue border border-white/5">
+        
+        <div class="glass p-5 rounded-2xl glow-blue border border-white/5">
             <button class="w-full text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(3)">
-                <span class="font-bold text-white text-sm sm:text-base pr-4">Do these apps require special Android permissions?</span>
+                <span class="font-bold text-white text-base pr-4">Do these apps require special Android permissions?</span>
                 <span id="faq-icon-3" class="text-cyan-400 transition-transform duration-300 transform shrink-0">
-                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
                 </span>
             </button>
-            <div id="faq-ans-3" class="hidden mt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
+            <div id="faq-ans-3" class="hidden mt-3 text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
                 Some applications (like SpellType Keyboard) require system-level input permissions to operate as a keyboard. We prioritize user privacy: no personal information is tracked, collected, or transmitted.
             </div>
         </div>
-
-        <div class="faq-card glass p-4 sm:p-5 rounded-xl sm:rounded-2xl glow-blue border border-white/5">
+        
+        <div class="glass p-5 rounded-2xl glow-blue border border-white/5">
             <button class="w-full text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(4)">
-                <span class="font-bold text-white text-sm sm:text-base pr-4">How can I submit feature requests or report a bug?</span>
+                <span class="font-bold text-white text-base pr-4">How can I submit feature requests or report a bug?</span>
                 <span id="faq-icon-4" class="text-cyan-400 transition-transform duration-300 transform shrink-0">
-                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
                 </span>
             </button>
-            <div id="faq-ans-4" class="hidden mt-3 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
+            <div id="faq-ans-4" class="hidden mt-3 text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
                 Every application has a dedicated GitHub repository. You can navigate to the app's details page, click on the 'GitHub Repo' button, and submit an Issue or pull request under the repository's tracker.
             </div>
         </div>
-
+        
         </div>
     </section>
 
     <!-- About & Developer Section -->
-    <section id="about" class="container mx-auto px-4 py-10 sm:py-16 max-w-5xl">
-        <div class="about-card glass-premium p-5 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl glow-purple border border-purple-500/10 flex flex-col md:flex-row gap-6 sm:gap-8 items-center">
-            <div class="w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 rounded-full bg-gradient-neon p-1 shrink-0 glow-purple select-none">
-                <div class="w-full h-full rounded-full bg-[#03000a] flex items-center justify-center text-5xl sm:text-6xl md:text-7xl">
+    <section id="about" class="container mx-auto px-4 py-16 max-w-5xl">
+        <div class="glass-premium p-8 md:p-12 rounded-3xl glow-purple border border-purple-500/10 flex flex-col md:flex-row gap-8 items-center">
+            <!-- Developer Avatar Placeholder with glow -->
+            <div class="w-32 h-32 md:w-48 md:h-48 rounded-full bg-gradient-neon p-1 shrink-0 glow-purple select-none">
+                <div class="w-full h-full rounded-full bg-[#03000a] flex items-center justify-center text-6xl md:text-7xl">
                     👨‍💻
                 </div>
             </div>
             <div class="flex-grow text-center md:text-left">
                 <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold tracking-wider uppercase border border-purple-500/20">The Visionary</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-3 mb-3 sm:mb-4">Prince Laghari & TEAM PK AI</h2>
-                <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4 sm:mb-6">
+                <h2 class="text-3xl font-extrabold text-white tracking-tight mt-3 mb-4">Prince Laghari & TEAM PK AI</h2>
+                <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-6">
                     A passionate Android systems architect, building state-of-the-art consumer utilities. Specializing in highly optimized client-side AI integration, hardware-accelerated rendering, and premium minimalist translucent glassmorphic styles.
                 </p>
-                <div class="flex flex-wrap gap-3 sm:gap-4 justify-center md:justify-start">
-                    <a href="https://github.com/Salmanlaghari" target="_blank" class="px-4 sm:px-5 py-2.5 sm:py-3 rounded-lg bg-white/5 hover:bg-white/10 text-white text-xs font-bold border border-white/10 hover:border-white/20 transition flex items-center gap-2">
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="https://github.com/Salmanlaghari" target="_blank" class="px-5 py-3 rounded-lg bg-white/5 hover:bg-white/10 text-white text-xs font-bold border border-white/10 hover:border-white/20 transition flex items-center gap-2">
                         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                         GitHub Main Repo
                     </a>
-                    <a href="mailto:salmanlaghari@proton.me" class="px-4 sm:px-5 py-2.5 sm:py-3 rounded-lg bg-[#00e5ff]/10 hover:bg-[#00e5ff]/20 text-[#00e5ff] text-xs font-bold border border-[#00e5ff]/20 hover:border-[#00e5ff]/30 transition flex items-center gap-2">
+                    <a href="mailto:salmanlaghari@proton.me" class="px-5 py-3 rounded-lg bg-[#00e5ff]/10 hover:bg-[#00e5ff]/20 text-[#00e5ff] text-xs font-bold border border-[#00e5ff]/20 hover:border-[#00e5ff]/30 transition flex items-center gap-2">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                         Contact Developer
                     </a>
@@ -694,73 +822,76 @@
     </section>
 
     <!-- Footer -->
-    <footer class="glass border-t border-white/5 py-8 sm:py-12 mt-auto">
+    <footer class="glass border-t border-white/5 py-12 mt-auto">
         <div class="container mx-auto px-4 max-w-6xl">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
-                <a href="index.html" class="flex items-center gap-2 sm:gap-3">
-                    <img src="assets/images/favicon.svg" alt="Logo" class="w-7 h-7 sm:w-8 sm:h-8">
-                    <span class="text-base sm:text-lg font-bold text-white">AI APPS HUB</span>
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/images/favicon.svg" alt="Logo" class="w-8 h-8">
+                    <span class="text-lg font-bold text-white">AI APPS HUB</span>
                 </a>
-                <div class="flex gap-4 sm:gap-6 text-xs sm:text-sm text-gray-400">
+                <div class="flex gap-6 text-sm text-gray-400">
                     <a href="#hero" class="hover:text-white transition">Home</a>
                     <a href="#featured" class="hover:text-white transition">Featured</a>
                     <a href="#apps" class="hover:text-white transition">All Apps</a>
                     <a href="#faq" class="hover:text-white transition">FAQ</a>
                 </div>
             </div>
-            <div class="border-t border-white/5 pt-6 sm:pt-8 text-center text-[10px] sm:text-xs text-gray-500">
+            <div class="border-t border-white/5 pt-8 text-center text-xs text-gray-500">
                 <p>© 2026 AI Apps Hub. Built by <a href="https://github.com/Salmanlaghari" target="_blank" class="text-gray-400 hover:text-cyan-400 transition">Prince Laghari & TEAM PK AI</a>. All Rights Reserved.</p>
-                <p class="mt-2 text-[9px] sm:text-[10px] text-gray-600 font-mono">Precision Crafted with Glassmorphic Aesthetics & AI Architecture.</p>
+                <p class="mt-2 text-[10px] text-gray-600 font-mono">Precision Crafted with Glassmorphic Aesthetics & AI Architecture.</p>
             </div>
         </div>
     </footer>
 
     <!-- Interactive Scripts -->
     <script>
-        // Mobile Navigation
-        function openMobileNav() {
-            document.getElementById('mobileNav').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeMobileNav() {
-            document.getElementById('mobileNav').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Search Filter
+        // Search Filter Functionality
         function filterSearch() {
             const input = document.getElementById('searchInput');
             const filter = input.value.toLowerCase();
             const container = document.getElementById('appsContainer');
             const cards = container.getElementsByClassName('app-card');
+
             for (let i = 0; i < cards.length; i++) {
                 const appName = cards[i].getAttribute('data-name');
-                cards[i].style.display = appName.includes(filter) ? "" : "none";
+                if (appName.includes(filter)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
             }
         }
 
-        // Category Filter
+        // Category Filter Functionality
         function filterCategory(cat) {
             const container = document.getElementById('appsContainer');
             const cards = container.getElementsByClassName('app-card');
+
+            // Highlight active button
             const buttons = document.getElementsByClassName('category-btn');
             for (let btn of buttons) {
                 if (btn.innerText.trim() === cat || (cat === 'All' && btn.innerText.includes('All'))) {
-                    btn.className = "filter-btn category-btn px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold rounded-full bg-cyan-500 text-black border border-cyan-500/30 shadow-lg glow-blue transition duration-300";
+                    btn.className = "category-btn px-4 py-2 text-xs font-semibold rounded-full bg-cyan-500 text-black border border-cyan-500/30 shadow-lg glow-blue transition duration-300";
                 } else {
-                    btn.className = "filter-btn category-btn px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300";
+                    btn.className = "category-btn px-4 py-2 text-xs font-semibold rounded-full glass text-gray-300 hover:text-white hover:border-cyan-400/50 transition duration-300";
                 }
             }
+
             for (let i = 0; i < cards.length; i++) {
                 const cardCat = cards[i].getAttribute('data-category');
-                cards[i].style.display = (cat === 'All' || cardCat === cat) ? "" : "none";
+                if (cat === 'All' || cardCat === cat) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
             }
         }
 
-        // FAQ Toggle
+        // FAQ Toggle Accordion Functionality
         function toggleFaq(idx) {
             const ans = document.getElementById(`faq-ans-${idx}`);
             const icon = document.getElementById(`faq-icon-${idx}`);
+
             if (ans.classList.contains('hidden')) {
                 ans.classList.remove('hidden');
                 icon.classList.add('rotate-180');
