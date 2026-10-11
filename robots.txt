@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://salmanlaghari.github.io/ApexStudio/sitemap.xml
+Sitemap: https://salmanlaghari.github.io/Official-AI-Apps-Huba/sitemap.xml
 
 # AI / LLM crawlers - all allowed
 User-agent: GPTBot
